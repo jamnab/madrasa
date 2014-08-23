@@ -1,6 +1,8 @@
+'use strict';
+
 $(function() {
 
-  $(document).ready( function(){
+  $(document).ready( function() {
 	
 	window.scrollTo(0,0);
 
@@ -9,7 +11,7 @@ $(function() {
   });
 
 //Click event when particular link is pressed
-  $('.topic').click( function(){
+  $('.topic').click( function() {
       
       featureID = $(this).attr('id');
 	
@@ -22,7 +24,8 @@ $(function() {
     
      //Click event when Submit a link is pressed
     $('#menu-btn').click( function() {
-            opensesame();
+            //opensesame();
+        submitAppear();
     });
       
 //Keypress event to see if enter was pressed in text input
@@ -56,9 +59,9 @@ function loadInitial() {
             'initial' : initialVal
               
               },
-    beforeSend: function(data) {
+    beforeSend: function (data) {
 
-	$('#banner-panel').append('<div id="banner"><h1>Learn Something New Everyday</h1><h2>Discover great how-tos from around the web. Find the tutorials you want without getting lost searching.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Exploring"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
+	$('#banner-panel').append('<div id="banner"><h1>Learn How To Get Started</h1><h2>Discover great how-tos from around the web. Find the tutorials you want without getting lost searching.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Exploring"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
 
       },
       
@@ -96,6 +99,15 @@ function loadInitial() {
       }
     }
   });
+}
+
+function submitAppear() {
+    $('#submit-panel').append('<div id="submit-display"><a id="close" href="#"><img src="img/close-btn-w.png"></a><form action="submit.php"><h1>Submit a Post</h1><p>Add educational articles, videos, podcasts, infographics, etc. you`d like to share.</p><input class="submit title" name="title" maxlength="75" type="text" placeholder="Enter title*" required autofocus><input class="submit link" name="link" maxlength="155" type="text" placeholder="http://example.com*" required><input class="submit image" name="image" type="text" maxlength="155" placeholder="Add image url (Optional)"><textarea class="submit description" name="desc" type="text" rows="3" maxlength="155" placeholder="Enter a description*" required></textarea><select class="categories" name="category"><option class="category" value="category">Pick a category</option><option class="category" value="art">art</option><option class="category" value="design">design</option><option class="category" value="fashion">fashion</option><option class="category" value="sports">sports</option><option class="category" value="tech">tech</option></select><input class="submit tags" name="tags" type="text" maxlength="75" placeholder="Separate tags with a space"><hr><input id="submit-btn" type="button" value="Submit"></div>');
+    
+    $('#close').click( function() {
+        $('#submit-display').remove();
+    });
+
 }
 
 function opensesame() {
@@ -204,7 +216,7 @@ function doSearch() {
 		data: {
 			'text': searchText
 		},
-		beforeSend: function(){
+		beforeSend: function () {
             
 			$('#banner').remove();
             

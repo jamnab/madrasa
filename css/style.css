@@ -2,11 +2,11 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,
 
 
 html {
-    font-size: 62.5%;}
+    font-size: 62.5%}
 body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     background-color: #f5f5f5;
 }
 h1 {
@@ -32,7 +32,7 @@ hr {
     clear: both;
     border-top: 0;
     border-left: 0;
-    border-bottom: 1px dashed #f4f4f4;
+    border-bottom: 1px dashed #e4e4e4;
     height: 0;
     width: 100%;
     margin: 25px 0;
@@ -46,25 +46,34 @@ a {
     text-decoration: none;
     color: #777;
 }
-input[type=search] {
+input[type=search], input[type=text], textarea {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
+    
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    color: #777;
+    letter-spacing:normal;
+    background-color: #fbfbfb;
+    height:40px;
 }
 #text::-webkit-input-placeholder {
     color: #777;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
     padding: 0;
 }
 #text::-moz-placeholder {
     color: #777;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
     padding: 0;
 }
 #text::-ms-input-placeholder {
     color: #777;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
     padding: 0;
 }
@@ -106,17 +115,11 @@ input[type=search] {
 }
 #text {
     border: 1px solid #e1e1e1;
-    -moz-border-radius: 17px;
-    -webkit-border-radius: 17px;
-    border-radius: 17px;
     width: 100%;
-    height: 40px;
     margin: 0;
     padding: 0 10px;
     font-size: 18px;
-    letter-spacing: normal;
-    background-color: #fff;
-    color: #777;
+
 }
 #text:focus {
     border: 2px solid red;
@@ -127,7 +130,7 @@ input[type=search] {
 }
 #menu-btn {
     border: none;
-    background: url(../img/menu-btn.png) no-repeat;
+    background: url(menu-btn.png) no-repeat;
     background-size: contain;
     padding: 0;
     height: 40px;
@@ -149,7 +152,6 @@ input[type=search] {
     right: -250px;
     top: 0;
     background-color: #e71e2f;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
     overflow-y: auto;
     box-shadow: 2px 0 10px 0 #b31f28 inset;
 }
@@ -180,8 +182,8 @@ input[type=search] {
 	height:400px;
 	width:100%;
 	margin-top:55px;
-	padding-top:100px;
-	background-image:url(../img/7708275562_d95748cdbd_h.jpg);
+	padding-top:75px;
+	background-image:url(banner-images/11236258064_9b94ee6281_b.jpg);
 	background-size:cover;
 	text-align:center;
 }
@@ -193,7 +195,6 @@ input[type=search] {
 }
 #banner h2 {
 	color:#fff;
-	font-family:'Helvetica Neue', 'Franklin Gothic', Arial, sans-serif;
 	font-weight:100;
 	font-size:21px;
 	width:400px;
@@ -217,7 +218,7 @@ input[type=search] {
     height: 55px;
     width: 300px;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
-    font: 400 21px Helvetica, 'Franlink Gothic', Arial, sans-serif;
+    font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
     letter-spacing:0.2px;
 }
 #explore:hover {
@@ -228,19 +229,19 @@ input[type=search] {
     height: 100%;
     min-height: 300px;
     width: auto;
-    padding: 3% 0 3%;
-    margin-top: 65px;
+    padding: 2% 0 3%;
+    margin-top: 60px;
     overflow-y: auto;
     position: relative;
     z-index: 0;
-    font-family: Georgia, Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     background-color: transparent;
 }
 #main-panel h1 {
     margin-left: 0;
-    font-size: 30px;
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font:200 30px 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     width: 100%;
+    color:#e71e2f;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -262,7 +263,7 @@ input[type=search] {
     margin: 5px;
     background-color: #fff;
     border-bottom: 1px solid #e1e1e1;
-    border-radius: 7px;
+    border-radius: 4px;
     position: relative;
 }
 #link-display #link-overlay img {
@@ -272,10 +273,10 @@ input[type=search] {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 7px 7px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 #link-display h3 {
-    font-family: Helvetica, 'Franklin Gothic', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 #link-display h3, p {
     margin: 4%;
@@ -286,7 +287,6 @@ input[type=search] {
     color: #999;
 }
 #link-display #link-overlay hr {
-    width: 248px;
     position: absolute;
     bottom: 10px;
 }
@@ -317,10 +317,132 @@ input[type=search] {
     border-radius: 10px;
     height: 50px;
     width: 90%;
-    font: 400 21px Helvetica, 'Franlink Gothic', Arial, sans-serif;
+    font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 #more:hover {
-    background-color: #cf212d;
+    opacity: 0.9;
+    cursor: pointer;
+}
+#submit-display {
+    width: 100%;
+    height:100%;
+    background-color: rgba(231,30,47,0.9);
+    z-index:2000;
+    position:fixed;
+    border-radius:0;
+    top:0;
+    left:0;
+}
+#submit-display #close {
+	position:fixed;
+	top:0;
+	right:0;
+	margin:10px;
+	cursor:pointer;
+}
+#submit-display form {
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:45px;
+    min-width:380px;
+    max-width:480px;
+    width:50%;
+    height: auto;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 7px;
+    position: relative;
+    padding:15px 0 10px 0;
+    background-color:#fff;
+}
+#submit-display h1 {
+	font-weight:600;
+	font-size:30px;
+	margin: 0 0 20px 10%;
+}
+#submit-display hr {
+	margin: 15px 0 0 0;
+}
+#submit-display select {
+	width:90%;
+	margin: 5px 5%;
+	font-size:18px;
+	text-align:center;
+	background:transparent;
+	border: 1px solid #e1e1e1;
+	color:#e71e2f;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+#submit-display textarea {
+	resize:none;
+	height:65px;
+	padding-top:10px;
+	overflow:none;
+}
+#submit-btn {
+    border: none;
+    background-color: #e71e2f;
+    color: #fff;
+    margin: 15px 5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 50px;
+    width: 90%;
+    font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+#submit-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.submit {
+    border: 1px solid #e1e1e1;
+    width: 85%;
+    height: 40px;
+    margin: 5px 5%;
+    padding: 0 10px;
+    font-size: 16px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.submit:focus {
+    border: 1px solid red;
+}
+#register-display {
+    margin-left: auto;
+    margin-right: auto;
+    min-width:380px;
+    max-width:480px;
+    width:50%;
+    height: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 7px;
+    position: relative;
+    padding:15px 0 10px 0;
+    
+}
+#register-display h1 {
+	font-weight:600;
+	margin: 0 0 20px 0;
+}
+#register-display hr {
+	margin: 25px 0 5px 0;
+}
+#register-btn {
+    border: none;
+    background-color: #e71e2f;
+    color: #fff;
+    margin: 15px 5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 50px;
+    width: 90%;
+    font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+#register-btn:hover {
+    opacity: 0.9;
     cursor: pointer;
 }
 @media only screen and (max-width:1180px) {
@@ -348,7 +470,7 @@ input[type=search] {
     #search-area {width: 70%;}
     #branding {margin-right: 2%;}
     #menu {margin-left: 5%;}
-    #banner {padding-top:75px;};
+    #banner {background-position:center;}
     #banner h2 {width:300px;}
 }
 @media screen and (max-width:705px) {
@@ -370,7 +492,7 @@ input[type=search] {
     #link-display {width: 50%;}
 }
 @media screen and (max-width:532px) {
-    #main-panel {margin-top: 15px;}
+    #main-panel {margin-top: 65px;}
     #text {height: 40px;font-size: 18px;padding-left: 7%;padding-right: 0;}
     #logo #icon {height: 40px;width: 40px;}
     #menu-btn {height: 40px;width: 45px;}

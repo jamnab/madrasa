@@ -1,0 +1,44 @@
+Follow your favorite blogs and discover new ones.
+Bloglovin helps you follow the blogs you read by letting you know when they update.
+
+Learn Something You'll Enjoy
+Learn To Do Something Great
+Enjoy Learning
+Discover crazy, fun and interesting projects to do with your time.
+
+Startup A-list: 100 of the top posts from Fred Wilson, PG, & more
+http://www.madrasa.ca/link.php?text=startups
+
+Problem
+Content Creators are hungry for attention
+
+Explanation
+Experts are giving away free learning content trying to gather a following
+
+Solution
+Drive traffic to websites of internet experts
+
+Knowledge Worth Sharing
+
+
+Posted Dec 10, 2013 by Darrell Etherington (@drizzled)
+http://techcrunch.com/2013/12/10/gibbon-learning-playlists/
+
+http://mozy.com/blog/author/dannywong/
+http://mozy.com/blog/life-in-the-cloud/gibbon-co-and-the-world-of-online-learning/
+
+update table
+set path = replace(path, 'oldstring', 'newstring') where path = 'oldstring'
+
+UPDATE `posts` SET `tags` = 'tech tutsplus' WHERE `posts`.`link` LIKE 'http://net.tutsplus.com/%'
+
+SELECT link, 
+ COUNT(link) AS NumOccurrences
+FROM posts
+GROUP BY link
+HAVING ( COUNT(link) > 1 )
+
+$string = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $string);
+It matches anything in range 0-31, 128-255 and removes it.
+
+’

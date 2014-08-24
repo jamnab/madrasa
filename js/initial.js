@@ -182,14 +182,12 @@ function submitPost() {
             type: 'POST',
             data: { 'submit' : submitFields },
             beforeSend: function () {
-                //alert(submitFields);
+                
             },
             success: function (data) {
 
                 if (data.success) {
-                    //$.each(data.results, function () {
-                        alert(data.results);
-                    //});
+
                     alert('Thanks for contributing!');
                     $('#submit-display').remove();
 

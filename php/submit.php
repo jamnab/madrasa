@@ -11,18 +11,22 @@ $data = array(
 	
 	//Has the text been posted?
 if (isset($_REQUEST['submit'])) {		
-    
-        //foreach($_REQUEST['submit'] as $data['results']) {
+    	
+    	$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['submit']);
+  
+        foreach($data['results'] as $key=>$i) {
             //Escape array to prevent SQL injection
-            //$data['results'] = $db->real_escape_string($_REQUEST['submit']);
-            //$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['submit']);
-        //}
-    
+            $data['results'][$key] = $db->real_escape_string($i);   
+        }
+    	
+    	$submit = $data['results'];
+    	
         //Create query to insert values
-		//$s = "INSERT INTO startups" . "(title, link, image, description, category, tags)" . "VALUES ('$submit[0]', '$submit[1]', '$submit[2]', '$submit[3]', '$submit[4]', '$submit[5]')";
-        $data['results'] = $_REQUEST['submit'];
-        $data['success'] = true;
+		$i = "INSERT INTO posts (`title`, `link`, `image`, `description`, `category`, `tags`) VALUES ('$submit[0]', '$submit[1]', '$submit[2]', '$submit[3]', '$submit[4]', '$submit[5]')";
+        $insert = $db->query($i);
         
+        $data['success'] = true;
+
     } else {
         $data['success'] = false;
         $data['error'] = "C'mon man! That's not a valid submission!";

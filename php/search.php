@@ -23,7 +23,7 @@
 		$text = explode(" ", strtolower($text));
 		$field1 = "lower(`title`)"; //convert title to lowercase
 		$field2 = "`link`"; //declare link field variable
-        	$field3 = "`tags`"; //declare tags field variable
+        $field3 = "`tags`"; //declare tags field variable
 		$field4 = "`category`"; //declare category field variable
         
              

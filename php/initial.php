@@ -9,21 +9,16 @@
 
 	$categories = array(
             'art',
-            'career',
             'design',
             'diy',
             'fashion',
             'food',
-            'fitness',
-            'health',
-            'languages',
             'lifehacks',
             'maker',
             'money',
             'sports',
             'startups',
-            'tech',
-	    'travel' 
+            'tech' 
         );
 
     //Connect to the database
@@ -40,7 +35,7 @@
         for ($i = 0; $i < count($categories); $i++) {
     
             // Select a random post from a subject
-           $q = "SELECT * FROM posts WHERE category LIKE \"" . $categories[$i] . "\" ORDER BY RAND() LIMIT 1"; 
+           $q = "SELECT * FROM posts WHERE category LIKE '%" . $categories[$i] . "%' ORDER BY RAND() LIMIT 1"; 
     
            $result = $db->query($q);
     

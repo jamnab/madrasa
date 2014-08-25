@@ -2,11 +2,14 @@
 
 $(function () {
     $(document).ready(function () {
-	    window.scrollTo(0, 0);
 
         loadInitial();
     });
-
+	
+	$('#header-panel').click(function () {
+		$('html, body').animate({scrollTop: $('#main-panel').offset().top - 60}, 'slow', 'swing');
+	});
+	
     $('.topic').click(function () {
         var featureID = $(this).attr('id');
         loadFeatures();
@@ -42,20 +45,18 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>Learn How To Start Up</h1><h2>Building a startup is hard. Madrasa makes is easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
-
+            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes is easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
         },
-      
         success: function (data) {  
 
             if (data.success) {
 
                 if (data.results.length > 0) {
 
-                    $('#title').append("Welcome! Here are some interesting How-Tos.");
+                    $('#title').append("Welcome, Here are some featured posts.");
             
                     $.each(data.results, function () {
-                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><div id='featured'><a>" + this.category + "</a></div><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
+                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><div id='featured'><span>" + this.category + "</span></div><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
                     });
                     $('img').unveil(200);
                 } else {
@@ -69,15 +70,7 @@ function loadInitial() {
 }
 
 function exploreClick() {
-	$('html, body').animate({scrollTop: $('#main-panel').offset().top - 40}, 'slow', 'swing');
-}
-function submitAppear() {
-    $('#submit-panel').append('<div id="submit-display"><a id="close" href="#"><img src="img/close-btn-w.png"></a><form><h1>Submit a Post</h1><p>Share educational articles, videos, podcasts, infographics, and more.</p><input class="submit title" name="title" maxlength="75" type="text" placeholder="Enter title*" required autofocus><input class="submit link" name="link" maxlength="155" type="text" placeholder="http://example.com*" required><input class="submit image" name="image" type="text" maxlength="155" placeholder="Add image url (Optional)"><textarea class="submit desc" name="desc" type="text" rows="3" maxlength="155" placeholder="Enter a description*" required></textarea><select class="submit cat" name="category"><option class="category" value="" selected disabled style="display:none;">Choose a category</option><option class="category" value="art">art</option><option class="category" value="design">design</option><option class="category" value="fashion">fashion</option><option class="category" value="sports">sports</option><option class="category" value="tech">tech</option></select><input class="submit tags" name="tags" type="text" maxlength="75" placeholder="Separate tags with a space"><hr><input id="submit-btn" type="button" value="Submit"></div>');
-    
-    $('#close').click(function () {
-        $('#submit-display').remove();
-    });
-
+	$('html, body').animate({scrollTop: $('#main-panel').offset().top - 60}, 'slow', 'swing');
 }
 
 function opensesame() {
@@ -169,6 +162,14 @@ function doSearch() {
 			}
 		}
 	});
+}
+function submitAppear() {
+    $('#submit-panel').append('<div id="submit-display"><a id="close" href="#"><img src="img/close-btn-w.png"></a><form><h1>Submit a Post</h1><p>Share educational articles, videos, podcasts, infographics, and more.</p><input class="submit title" name="title" maxlength="75" type="text" placeholder="Enter title*" required autofocus><input class="submit link" name="link" maxlength="155" type="text" placeholder="http://example.com*" required><input class="submit image" name="image" type="text" maxlength="155" placeholder="Add image url (Optional)"><textarea class="submit desc" name="desc" type="text" rows="3" maxlength="155" placeholder="Enter a description*" required></textarea><select class="submit cat" name="category"><option class="category" value="" selected disabled style="display:none;">Choose a category</option><option class="category" value="Design">Design</option><option class="category" value="Funding">Funding</option><option class="category" value="Growth">Growth</option><option class="category" value="Marketing">Marketing</option><option class="category" value="Product">Product</option><option class="category" value="Sales">Sales</option><option class="category" value="Strategy">Strategy</option><option class="category" value="Team">Team</option><option class="category" value="Tech">Tech</option><option class="category" value="Venture">Venture</option></select><input class="submit tags" name="tags" type="text" maxlength="75" placeholder="Separate tags with a space"><hr><input id="submit-btn" type="button" value="Submit"></div>');
+    
+    $('#close').click(function () {
+        $('#submit-display').remove();
+    });
+
 }
 function submitPost() {
 

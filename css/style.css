@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
 }
 h1 {
     font-size: 4em;
@@ -100,13 +100,13 @@ input[type=search], input[type=text], textarea {
     transition: all 0.3s ease-in-out;
 }
 #logo:hover {
-    opacity:0.9;
+    opacity:0.95;
 }
 #logo #icon {
     display: none;
     margin-top: 8px;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 #logo #word-mark {
     margin-top: 7px;
@@ -178,7 +178,7 @@ input[type=search], input[type=text], textarea {
 }
 #menu-btn:hover {
     cursor: pointer;
-    opacity:0.9;
+    opacity:0.95;
 }
 #topic-list {
     width: 250px;
@@ -283,7 +283,7 @@ input[type=search], input[type=text], textarea {
 }
 #main-panel h1 {
     margin-left: 0;
-    font:200 30px 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    font:400 30px 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     width: 100%;
     color:#e71e2f;
     margin-bottom: 30px;
@@ -302,7 +302,7 @@ input[type=search], input[type=text], textarea {
 }
 #link-display #link-overlay {
     width: 250px;
-    height: 400px;
+    height: 425px;
     padding: 0 0 20px;
     margin: 5px;
     background-color: #fff;
@@ -355,9 +355,9 @@ input[type=search], input[type=text], textarea {
 	margin-top:-2px;
 	padding:5px 0;
 	text-align:center;
-}
-#link-display #featured a {
 	color:#fff;
+	font-weight:100;
+	letter-spacing:0.3px;
 }
 #link-display #result-msg {
     font-size: 21px;
@@ -432,7 +432,7 @@ input[type=search], input[type=text], textarea {
 #submit-display select {
 	width:90%;
 	margin: 5px 5%;
-	font-size:18px;
+	font-size:16px;
 	text-align:center;
 	background:transparent;
 	border: 1px solid #e1e1e1;
@@ -541,10 +541,10 @@ input[type=search], input[type=text], textarea {
     #link-display {width: 90%;}
     #logo #word-mark {display: none;}
     #logo #icon {display: block;}
+    #search-area {width: 50%;}
 }
 @media screen and (max-width:590px) {
     #header-panel {padding-left: 0.5%;padding-right: 0.5%;}
-    #search-area {width: 50%;}
     #footer {display: none;}
     #link-display {width: 60%;}
     #banner h1 {font-size:30px;}
@@ -553,11 +553,14 @@ input[type=search], input[type=text], textarea {
     #link-display {width: 50%;}
 }
 @media screen and (max-width:532px) {
-    #main-panel {margin-top: 35px;}
-    #text {height: 35px;font-size: 18px;padding-left: 7%;padding-right: 0; margin-top:3px;}
+    #main-panel {margin-top: 50px;}
+    #text {height: 35px;font-size: 18px;padding-left: 2%;padding-right: 2%; margin-top:3px;}
     #link-display {width: 60%;}
     #header-panel {padding-bottom: 8px;}
     #menu-btn{height: 30px; width: 35px;}
+    #logo #icon{height: 35px; width: 35px;}
+    #menu {margin-right:1%;}
+    #branding {margin-left:2%;}
 }
 @media screen and (max-width:440px) {
     #main-panel {padding: 4% auto 0;}

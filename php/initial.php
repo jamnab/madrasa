@@ -8,17 +8,15 @@
 	);
 
 	$categories = array(
-            'art',
             'design',
-            'diy',
-            'fashion',
-            'food',
-            'lifehacks',
-            'maker',
-            'money',
-            'sports',
-            'startups',
-            'tech' 
+            'funding',
+            'growth',
+            'marketing',
+            'product',
+            'sales',
+            'strategy',
+            'team',
+            'tech'
         );
 
     //Connect to the database

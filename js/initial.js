@@ -55,7 +55,7 @@ function loadInitial() {
                     $('#title').append("Welcome! Here are some interesting How-Tos.");
             
                     $.each(data.results, function () {
-                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
+                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><div id='featured'><a>" + this.category + "</a></div><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
                     });
                     $('img').unveil(200);
                 } else {

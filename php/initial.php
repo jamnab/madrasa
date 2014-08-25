@@ -57,6 +57,7 @@
 					'link' => $row['link'],
 					'image' => $row['image'],
 					'description' => $row['description'],
+					'category' => $row['category'],
 					'tags' => $row['tags']
 				);
                

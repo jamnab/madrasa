@@ -218,7 +218,7 @@ input[type=search], input[type=text], textarea {
 #banner {
 	height:400px;
 	width:100%;
-	margin-top:55px;
+	margin-top:50px;
 	padding-top:75px;
 	background-image:url(../img/5442893743_1a91117e73_b.jpg);
 	background-size:cover;
@@ -412,7 +412,7 @@ input[type=search], input[type=text], textarea {
 #submit-display h1 {
 	font-weight:600;
 	font-size:30px;
-	margin: 0 0 20px 10%;
+	margin: 0 0 20px 0;
 }
 #submit-display hr {
 	margin: 15px 0 0 0;
@@ -541,7 +541,7 @@ input[type=search], input[type=text], textarea {
     #link-display {width: 50%;}
 }
 @media screen and (max-width:532px) {
-    #main-panel {margin-top: 55px;}
+    #main-panel {margin-top: 35px;}
     #text {height: 35px;font-size: 18px;padding-left: 7%;padding-right: 0; margin-top:3px;}
     #link-display {width: 60%;}
     #header-panel {padding-bottom: 8px;}

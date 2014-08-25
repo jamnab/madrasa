@@ -17,7 +17,8 @@
             'sales',
             'strategy',
             'team',
-            'tech'
+            'tech',
+            'venture'
         );
 
     //Connect to the database

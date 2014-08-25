@@ -11,7 +11,6 @@
             'design',
             'funding',
             'growth',
-            'marketing',
             'product',
             'prototyping',
             'sales',

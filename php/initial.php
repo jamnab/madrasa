@@ -13,6 +13,7 @@
             'growth',
             'marketing',
             'product',
+            'prototyping',
             'sales',
             'strategy',
             'team',

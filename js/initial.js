@@ -162,7 +162,7 @@ function doSearch() {
 					$("img").unveil(200);
 
 				} else {
-					$('#link-display').append("<h1 id='title'>Sorry no results for <a href=''>" + searchText + "</a>. Here's some </h1>");
+					$('#link-display').append("<h1 id='title'>Sorry no results for <a href=''>" + searchText + "</a>. Here's some other posts.</h1>");
 					loadInitial();
 					$('#banner').remove();
 				}

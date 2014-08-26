@@ -3,9 +3,9 @@
 	//Prepare an array to hold data we are going to send back to the jQuery
 	$data = array(
 		'results' => array(),
+		'category' => array(),
 		'success' => false,
-		'error' => '',
-		'category' => array()
+		'error' => ''
 	);
 
 	$data['category'] = array(

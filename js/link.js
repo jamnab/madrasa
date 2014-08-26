@@ -4,7 +4,7 @@ $(function () {
     var featureID;
     
     $(document).ready(function () {
-
+		loadInitial();
     });
 	
 	$('#header-panel').click(function () {
@@ -58,8 +58,6 @@ function loadInitial() {
             if (data.success) {
 
                 if (data.results.length > 0) {
-
-                    $('#title').append("Welcome, Here are some featured posts.");
             
                     $.each(data.results, function () {
                         $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><div id='featured'><span>" + this.category + "</span></div><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
@@ -160,9 +158,8 @@ function doSearch() {
 					$("img").unveil(200);
 
 				} else {
-					$('#link-display').append("<h1 id='title'>Sorry no results for <a href=''>" + searchText + "</a>. Here's some </h1>");
+					$('#link-display').append("<h1 id='title'>Sorry no results for <a href=''>" + searchText + "</a>. Here's some other posts.</h1>");
 					loadInitial();
-					
 				}
 
 			} else {

@@ -159,7 +159,7 @@ function doSearch() {
 
 				} else {
 					$('#link-display').append("<h1 id='title'>Sorry no results for <a href=''>" + searchText + "</a>.</h1>");
-					loadInitial();
+					
 				}
 
 			} else {

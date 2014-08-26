@@ -9,6 +9,7 @@
 	);
 
 	$data['category'] = array(
+            'Advice',
             'Design',
             'Funding',
             'Growth',

@@ -115,7 +115,7 @@ UserVoice.push(['autoprompt', {}]);
 <script ansyc src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script defer src='js/link.js'></script>
     <script async src='js/jquery.unveil.js'></script>
-    <script async src=\'php/mysearch.php?text=' . $_REQUEST['text'] . '\'></script>
+    <script async src=\"php/mysearch.php?text=" . $_REQUEST['text'] . "\"></script>
 </html>";
 
 ?>

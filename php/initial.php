@@ -18,6 +18,7 @@
             'Strategy',
             'Team',
             'Tech',
+            'Users',
             'Venture'
         );
 

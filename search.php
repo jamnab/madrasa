@@ -102,7 +102,7 @@ UserVoice.push(['autoprompt', {}]);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 	<div id='header-panel'>
-		<div id='branding'><a id='logo' href='' title='home'><img id='icon' src='img/ma-logo-w.png' alt='Ma'><img id='word-mark' src='img/ma-wordmark.png' alt='Madrasa'></a></div>
+		<div id='branding'><a id='logo' href='http://www.madrasa.ca' title='home'><img id='icon' src='img/ma-logo-w.png' alt='Ma'><img id='word-mark' src='img/ma-wordmark.png' alt='Madrasa'></a></div>
         <div id='search-area'><input id='text' type='search' placeholder='Search for...'></div>
         <div id='menu'><input class='btn add' type='button' title='submit'><input class='btn menu' type='button' title='menu'></div>
 	</div>

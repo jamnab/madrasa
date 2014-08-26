@@ -8,7 +8,7 @@ html {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;vvvv
+    user-select: none;
 }
 body {
     margin: 0;
@@ -104,7 +104,7 @@ input[type=search], input[type=text], textarea {
 }
 #logo #icon {
     display: none;
-    margin-top: 8px;
+    margin-top: 10px;
     width: 40px;
     height: 40px;
 }
@@ -157,13 +157,9 @@ input[type=search], input[type=text], textarea {
     margin-right: 3%;
     float:right;
 }
-#menu-btn {
+.btn {
     border: none;
-    background: url(../img/submit-btn.png) no-repeat;
-    background-size: contain;
     padding: 0;
-    height: 40px;
-    width: 45px;
     
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -176,9 +172,22 @@ input[type=search], input[type=text], textarea {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-#menu-btn:hover {
+.btn:hover {
     cursor: pointer;
     opacity:0.95;
+}
+.add {
+	background: url(../img/submit-btn.png) no-repeat;
+	background-size: contain;
+	height: 40px;
+    width: 40px;
+    margin-right:5px;
+}
+.menu {
+	background: url(../img/menu-btn.png) no-repeat;
+	background-size: contain;
+	height: 33px;
+    width: 35px;
 }
 #topic-list {
     width: 250px;
@@ -224,6 +233,7 @@ input[type=search], input[type=text], textarea {
 	background-size:cover;
     background-position: center;
 	text-align:center;
+	position: relative;
 }
 #banner h1 {
 	color:#fff;
@@ -556,11 +566,9 @@ input[type=search], input[type=text], textarea {
 }
 @media screen and (max-width:532px) {
     #main-panel {margin-top: 50px;}
-    #text {height: 35px;font-size: 18px;padding-left: 2%;padding-right: 2%; margin-top:3px;}
+    #text {font-size: 18px;padding-left: 2%;padding-right: 2%;}
     #link-display {width: 60%;}
     #header-panel {padding-bottom: 8px;}
-    #menu-btn{height: 30px; width: 35px;}
-    #logo #icon{height: 35px; width: 35px;}
     #menu {margin-right:1%;}
     #branding {margin-left:2%;}
 }

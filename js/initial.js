@@ -1,31 +1,29 @@
 'use strict';
 
 $(function () {
+    var featureID;
+    
     $(document).ready(function () {
 
         loadInitial();
     });
 	
 	$('#header-panel').click(function () {
-		$('html, body').animate({scrollTop: $('#main-panel').offset().top - 60}, 'slow', 'swing');
+		//$('html, body').animate({scrollTop: $('#main-panel').offset().top - 60}, 'slow', 'swing');
 	});
-	
-    $('.topic').click(function () {
-        var featureID = $(this).attr('id');
-        loadFeatures();
-        opensesame();
+    
+    $('.btn.menu').click(function () {
+    	opensesame();
     });
     
-    $('#menu-btn').click(function () {
-            //opensesame();
+    $('.btn.add').click(function () {
+    
         submitAppear();
         
         $('#submit-btn').click(function () {
             submitPost();
         });
     });
-    
-    
       
 	$('#text').keydown(function (e) {
         if (e.keyCode === 13) {
@@ -45,9 +43,19 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes is easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
+            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes it easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
         },
-        success: function (data) {  
+        success: function (data) {
+        	
+        	$.each(data.category, function (key, val) {
+        		$('#topic-list').append('<li><a class="topic" id="' + val + '" href="#"><h4>' + val + '</h4></a></li>');
+        	});
+        	
+        	$('.topic').click(function (featureID) {
+        		
+        		featureID = $(this).attr('id');
+        		loadFeatures(featureID);
+        	});
 
             if (data.success) {
 
@@ -77,27 +85,29 @@ function opensesame() {
     var rightval = $('#topic-list').css("right");
         
     if (rightval === "-250px") {
-        $('#search-panel').animate({ right: "250px" }, { duration: 225, queue: false });
+        $('#header-panel').animate({ right: "250px" }, { duration: 225, queue: false });
+        $('#banner').animate({ right: "250px" }, { duration: 225, queue: false });
         $('#main-panel').animate({ right: "250px" }, { duration: 225, queue: false });
         $('#topic-list').animate({ right: "0px" }, { duration: 225, queue: false });
     } else {
-        $('#search-panel').animate({ right: "0px" }, { duration: 300, queue: false });
+        $('#header-panel').animate({ right: "0px" }, { duration: 300, queue: false });
+        $('#banner').animate({ right: "0px" }, { duration: 300, queue: false });
         $('#main-panel').animate({ right: "0px" }, { duration: 300, queue: false });
         $('#topic-list').animate({ right: "-250px" }, { duration: 300, queue: false });
     }
 }
 
-function loadFeatures() {
+function loadFeatures(featureID) {
 
     $.ajax({
         url: 'php/features.php',
 		type: 'POST',
 		data: { 'subject' : featureID },
         beforeSend: function (data) {
-
-            $('#link-display').show();
+        
             $('#text').val("");
             $('#banner').remove();
+            opensesame();
         },
         success: function (data) {
             if (data.success) {

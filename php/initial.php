@@ -4,20 +4,21 @@
 	$data = array(
 		'results' => array(),
 		'success' => false,
-		'error' => ''
+		'error' => '',
+		'category' => array()
 	);
 
-	$categories = array(
-            'design',
-            'funding',
-            'growth',
-            'product',
-            'prototyping',
-            'sales',
-            'strategy',
-            'team',
-            'tech',
-            'venture'
+	$data['category'] = array(
+            'Design',
+            'Funding',
+            'Growth',
+            'Product',
+            'Prototyping',
+            'Sales',
+            'Strategy',
+            'Team',
+            'Tech',
+            'Venture'
         );
 
     //Connect to the database
@@ -31,14 +32,12 @@
         //Collect subject title
         $initial = $db->real_escape_string($_POST['initial']); //prevent sql injection
         
-        for ($i = 0; $i < count($categories); $i++) {
+        for ($i = 0; $i < count($data['category']); $i++) {
     
             // Select a random post from a subject
-           $q = "SELECT * FROM posts WHERE category LIKE '%" . $categories[$i] . "%' ORDER BY RAND() LIMIT 1"; 
+           $q = "SELECT * FROM posts WHERE category LIKE '%" . $data['category'][$i] . "%' ORDER BY RAND() LIMIT 1"; 
     
            $result = $db->query($q);
-    
-        
 
         
 		//Did the query complete successfully?

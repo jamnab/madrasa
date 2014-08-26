@@ -15,7 +15,7 @@
         $subject = $db->real_escape_string($_POST['subject']); //prevent sql injection
         
         // Select random posts
-        $q = "SELECT * FROM posts WHERE category LIKE '" . $subject . "' ORDER BY RAND() LIMIT 150";
+        $q = "SELECT * FROM posts WHERE category LIKE '" . $subject . "' ORDER BY RAND() LIMIT 50";
         
         $result = $db->query($q);
         

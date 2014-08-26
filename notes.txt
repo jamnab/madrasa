@@ -27,6 +27,11 @@ http://techcrunch.com/2013/12/10/gibbon-learning-playlists/
 http://mozy.com/blog/author/dannywong/
 http://mozy.com/blog/life-in-the-cloud/gibbon-co-and-the-world-of-online-learning/
 
+EMAIL
+"stuart mckeown" inurl:linkedin.com OR inurl:angel.co OR inurl:twitter.com OR inurl:facebook.com OR inurl:instagram.com
+
+SQL
+
 update table
 set path = replace(path, 'oldstring', 'newstring') where path = 'oldstring'
 

@@ -43,7 +43,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes it easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br><div class="fb-like" data-href="https://www.facebook.com/madrasaknows" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>');
+            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes it easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br></div>');
         },
         success: function (data) {
         	

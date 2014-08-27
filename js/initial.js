@@ -179,9 +179,6 @@ function submitAppear() {
     $('#close').click(function () {
         $('#submit-display').remove();
     });
-    $('#submit-panel').click(function () {
-        $('#submit-display').remove();
-    });
 
 }
 function submitPost() {

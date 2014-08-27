@@ -29,7 +29,7 @@
              
              //Run a LIKE query to search for titles that are like the entered text with multi-word option
 		
-		$q = "SELECT * FROM posts WHERE $field1 LIKE '%" . implode("%' AND $field1 LIKE '%", $text) . "%' OR $field2 LIKE '%" . implode("%' AND $field2 LIKE '%", $text) . "%' OR $field3 LIKE '%" . implode("%' AND $field3 LIKE '%", $text) . "%' OR $field4 LIKE '%" . implode("%' AND $field4 LIKE '%", $text) . "%' LIMIT 50";                
+		$q = "SELECT * FROM posts WHERE $field1 LIKE '%" . implode("%' AND $field1 LIKE '%", $text) . "%' OR $field2 LIKE '%" . implode("%' AND $field2 LIKE '%", $text) . "%' OR $field3 LIKE '%" . implode("%' AND $field3 LIKE '%", $text) . "%' OR $field4 LIKE '%" . implode("%' AND $field4 LIKE '%", $text) . "%' ORDER BY RAND() LIMIT 50";                
                 
 		$result = $db->query($q);
 

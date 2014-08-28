@@ -27,6 +27,22 @@ http://techcrunch.com/2013/12/10/gibbon-learning-playlists/
 http://mozy.com/blog/author/dannywong/
 http://mozy.com/blog/life-in-the-cloud/gibbon-co-and-the-world-of-online-learning/
 
+I’m __ (insert your name)
+and my company, __(insert
+ name of company),
+is solving a problem __ (insert
+ problem)
+to help __(a target customer)
+with a unique offering __(insert
+ unique offer).
+
+ Our solution will make a difference from ___ (insert
+ main competitor(s))
+because of the team __(insert
+ why your team will win)
+and with __(secret sauce/competitive
+ advantage).
+
 EMAIL
 "stuart mckeown" inurl:linkedin.com OR inurl:angel.co OR inurl:twitter.com OR inurl:facebook.com OR inurl:instagram.com
 

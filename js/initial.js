@@ -43,7 +43,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>Learn More. Fail Less.</h1><h2>Building a startup is hard. Madrasa makes it easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br></div>');
+            $('#banner-panel').append('<div id="banner"><h1>Learn From The Best Startups</h1><h2>Building a startup is hard. Madrasa makes it easier to find articles and videos from the best in the industry to help you survive the learning curve.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br></div>');
         },
         success: function (data) {
         	
@@ -118,7 +118,7 @@ function loadFeatures(featureID) {
                 if (data.results.length > 0) {
             
                     $.each(data.results, function () {
-                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' onclick='_gaq.push(['_trackEvent', 'External Link', 'Click', '" + this.title + "']);' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
+                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div");
                     });
                     $('img').unveil(200);
                 } else {
@@ -157,7 +157,7 @@ function doSearch() {
 					$('#link-display').append("<h1 id='title'>Here are How-Tos for <a href='#'>" + searchText + "</a></h1>");
 
 					$.each(data.results, function () {
-                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' onclick='_gaq.push(['_trackEvent', 'External Link', 'Click', '" + this.title + "']);' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div>");
+                        $('#link-display').append("<div id='link-overlay'><a href='" + this.link + "' target='_blank'><img src='img/madrasa-ph.png' data-src='" + this.image + "'><h3>" + this.title + "</h3><p>" + this.description + "</p><hr><a id='tags' href='#'>" + this.tags + "</a></a></div>");
 					});
 					$('img').unveil(200);
 

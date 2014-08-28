@@ -27,17 +27,18 @@ if (isset($_REQUEST['submit'])) {
         
         $data['success'] = true;
         
-        $date = date('Y-m-d H:i:s');
-        $to      = 'jamesbmcnab@gmail.com';
-        $subject = 'post submitted';
-        $message = 'A post was submitted to madrasa on' . $date;
-        //$headers = 'From: daily@madrasa.ca' . "\r\n" .
-          //  'Reply-To: daily@madrasa.ca' . "\r\n" .
-            //'X-Mailer: PHP/' . phpversion();
-        //mail($to, $subject, $message, $headers);
+        if ($data['success'] == true) {
+            $date = date('Y-m-d H:i:s');
+            $to      = 'jamesbmcnab@gmail.com';
+            $subject = 'post submitted';
+            $message = 'A post was submitted to madrasa on' . $date;
+            //$headers = 'From: daily@madrasa.ca' . "\r\n" .
+              //  'Reply-To: daily@madrasa.ca' . "\r\n" .
+                //'X-Mailer: PHP/' . phpversion();
+            //mail($to, $subject, $message, $headers);
 
-        mail($to, $subject, $message);
-
+            mail($to, $subject, $message);
+        }
     } else {
         $data['success'] = false;
         $data['error'] = "C'mon man! That's not a valid submission!";

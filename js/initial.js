@@ -201,7 +201,7 @@ function submitPost() {
 
                     alert('Thanks for contributing!');
                     $('#submit-display').remove();
-
+                    
                 } else {
                     alert(data.error);
                 }

@@ -103,7 +103,11 @@ UserVoice.push(['autoprompt', {}]);
 
 	<div id='header-panel'>
 		<div id='branding'><a id='logo' href='http://www.madrasa.ca' title='home'><img id='icon' src='img/ma-logo-w.png' alt='Ma'><img id='word-mark' src='img/ma-wordmark.png' alt='Madrasa'></a></div>
-        <div id='menu'><input class='btn add' type='button' title='submit'><input class='btn menu' type='button' title='menu'></div>
+        <div id='menu'>
+            <input class='btn search' type='button' title='search'>
+            <input class='btn add' type='button' title='submit'>
+            <input class='btn menu' type='button' title='menu'>
+        </div>
 	</div>
     <div id='search-panel'><input id='text' type='search' placeholder='What would you like to learn?'></div>
 	<ul id='topic-list'></ul>

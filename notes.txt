@@ -46,6 +46,8 @@ and with __(secret sauce/competitive
 EMAIL
 "stuart mckeown" inurl:linkedin.com OR inurl:angel.co OR inurl:twitter.com OR inurl:facebook.com OR inurl:instagram.com
 
+P.S. If you liked this post, you might enjoy our Madrasa Daily newsletter. Receive each new post delivered right to your inbox. Sign Up Here.
+
 SQL
 
 update table

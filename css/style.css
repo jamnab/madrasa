@@ -75,6 +75,21 @@ input[type=search], input[type=text], textarea {
     background-color: #fbfbfb;
     height:40px;
 }
+form {
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:45px;
+    min-width:340px;
+    max-width:480px;
+    width:50%;
+    height: auto;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 7px;
+    position: relative;
+    padding:15px 0 10px 0;
+    background-color:#fff;
+    text-align: center;
+}
 #header-panel {
     background-color: #e71e2f;
     z-index: 10;
@@ -116,7 +131,8 @@ input[type=search], input[type=text], textarea {
     width: 100%;
     padding: 0;
     top:0;
-    position:relative;
+    position:fixed;
+    z-index:5;
 }
 #branding, #menu {
     display: inline-table;
@@ -189,9 +205,16 @@ input[type=search], input[type=text], textarea {
 	background-size: contain;
 	height: 30px;
     width: 30px;
-    margin-right:5px;
+    margin-right:7px;
 }
 .add {
+	background: url(../img/submit-btn.png) no-repeat;
+	background-size: contain;
+	height: 37px;
+    width: 37px;
+    margin-right:5px;
+}
+.user {
 	background: url(../img/submit-btn.png) no-repeat;
 	background-size: contain;
 	height: 37px;
@@ -242,6 +265,7 @@ input[type=search], input[type=text], textarea {
 }
 #banner-panel {
 	position: relative;
+    margin-top:55px;
 }
 #banner {
 	height:400px;
@@ -299,32 +323,15 @@ input[type=search], input[type=text], textarea {
 }
 .share {
 	height:26px;
-	vertical-align:middle;
 }
 .fb-share-button {
-	background-color:rgba(255,255,255,0.3);
 	margin-right:15px;
-	
-	-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    padding:3px;
-}
-.twitter-share-button {
-	background-color:rgba(255,255,255,0.3);
-	
-	-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    padding:3px;
 }
 #main-panel {
     height: 100%;
     min-height: 300px;
     width: auto;
-    padding: 0 0 2% 3%;
+    padding: 0 0 50px 3%;
     margin-top: 30px;
     overflow-y: auto;
     position: relative;
@@ -353,7 +360,7 @@ input[type=search], input[type=text], textarea {
 }
 #link-display #link-overlay {
     width: 250px;
-    height: 425px;
+    height: 445px;
     padding: 0 0 20px;
     margin: 5px;
     background-color: #fff;
@@ -384,8 +391,23 @@ input[type=search], input[type=text], textarea {
 }
 #link-display p {
     max-height: 110px;
-    overflow: hidden;
+    text-overflow:ellipsis;
     color: #999;
+}
+.share.post {
+    position:absolute;
+    bottom:35px;
+    margin:10px 10px 5px 10px;
+    display: inline-block;
+}
+#link-display #link-overlay img.reddit {
+    width:auto;
+    height:20px;
+}
+.twitter-share-button {
+    padding-top:0;
+    padding-bottom:0;
+    margin-right:10px;
 }
 #link-display #link-overlay hr {
     position: absolute;
@@ -436,11 +458,11 @@ input[type=search], input[type=text], textarea {
     opacity: 0.9;
     cursor: pointer;
 }
-#submit-panel {
+.panel {
     width: 100%;
     height:100%;
 }
-#submit-display {
+.display {
     width: 100%;
     height:100%;
     background-color: rgba(231,30,47,0.9);
@@ -450,37 +472,22 @@ input[type=search], input[type=text], textarea {
     top:0;
     left:0;
 }
-#submit-display #close {
+.close {
 	position:fixed;
 	top:0;
 	right:0;
 	margin:10px;
 	cursor:pointer;
 }
-#submit-display form {
-	margin-left: auto;
-    margin-right: auto;
-    margin-top:45px;
-    min-width:340px;
-    max-width:480px;
-    width:50%;
-    height: auto;
-    border-bottom: 1px solid #e1e1e1;
-    border-radius: 7px;
-    position: relative;
-    padding:15px 0 10px 0;
-    background-color:#fff;
-    text-align: center;
-}
-#submit-display h1 {
+.display h1 {
 	font-weight:600;
 	font-size:30px;
 	margin: 0 0 20px 0;
 }
-#submit-display hr {
+.display hr {
 	margin: 15px 0 0 0;
 }
-#submit-display select {
+.display select {
 	width:90%;
 	margin: 5px 5%;
 	font-size:16px;
@@ -490,7 +497,7 @@ input[type=search], input[type=text], textarea {
 	color:#e71e2f;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
-#submit-display textarea {
+.display textarea {
 	resize:none;
 	height:65px;
 	padding-top:10px;
@@ -498,7 +505,7 @@ input[type=search], input[type=text], textarea {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     -webkit-appearance:textarea;
 }
-#submit-btn {
+.submit {
     border: none;
     background-color: #e71e2f;
     color: #fff;
@@ -511,11 +518,11 @@ input[type=search], input[type=text], textarea {
     text-shadow: 0 1px 1px rgba(0,0,0,0.2);
     font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
-#submit-btn:hover {
+.submit:hover {
     opacity: 0.9;
     cursor: pointer;
 }
-.submit {
+.field {
     border: 1px solid #e1e1e1;
     width: 85%;
     height: 40px;
@@ -526,45 +533,8 @@ input[type=search], input[type=text], textarea {
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
-.submit:focus {
+.field:focus {
     border: 1px solid red;
-}
-#register-display {
-    margin-left: auto;
-    margin-right: auto;
-    min-width:380px;
-    max-width:480px;
-    width:50%;
-    height: auto;
-    background-color: #fff;
-    border-bottom: 1px solid #e1e1e1;
-    border-radius: 7px;
-    position: relative;
-    padding:15px 0 10px 0;
-    
-}
-#register-display h1 {
-	font-weight:600;
-	margin: 0 0 20px 0;
-}
-#register-display hr {
-	margin: 25px 0 5px 0;
-}
-#register-btn {
-    border: none;
-    background-color: #e71e2f;
-    color: #fff;
-    margin: 15px 5%;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    height: 50px;
-    width: 90%;
-    font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
-}
-#register-btn:hover {
-    opacity: 0.9;
-    cursor: pointer;
 }
 @media only screen and (max-width:1180px) {
     #link-display {width: 94%;}

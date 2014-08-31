@@ -1,5 +1,7 @@
 <?php
-	
+	//start a new session for visitors
+    session_start();
+
 	//Prepare an array to hold data we are going to send back to the jQuery
 	$data = array(
 		'results' => array(),

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>Madrasa | Enjoy Learning</title>
-	<meta name="description" content="Enjoy Learning. Discover crazy, fun and interesting projects to do with your time.">
+	<title>Madrasa | Learn About Startups, From Startups</title>
+	<meta name="description" content="Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta content="Madrasa" name="apple-mobile-web-app-title">
 
@@ -16,10 +16,10 @@
 	<link rel="prerender" href="http://www.madrasa.ca" />
 
     <!-- Twitter Card data --> 
-    <meta name="twitter:card" content="Learn how to get started. Discover crazy, fun and interesting projects to do with your time."> 
+    <meta name="twitter:card" content="Learn About Startups, From Startups. Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed."> 
     <meta name="twitter:site" content="@madrasaknows"> 
     <meta name="twitter:title" content="Madrasa.ca"> 
-    <meta name="twitter:description" content="Learn how to get started. Discover crazy, fun and interesting projects to do with your time."> 
+    <meta name="twitter:description" content="Learn About Startups, From Startups. Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed."> 
     <meta name="twitter:creator" content="@madrasaknows"> 
     <meta name="twitter:image" content="http://madrasa.ca/img/ma-apple-icon.png">
 
@@ -28,14 +28,13 @@
     <meta property="og:type" content="website" /> 
     <meta property="og:url" content=" http://madrasa.ca/" />
     <meta property="og:image" content="http://madrasa.ca/img/ma-og-icon.png" />
-    <meta property="og:description" content="Enjoy Learning. Discover crazy, fun and interesting projects to do with your time." /> 
+    <meta property="og:description" content="Learn About Startups, From Startups. Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed." /> 
     <meta property="og:site_name" content="Madrasa.ca" /> 
     <meta property="fb:admins" content="508293321" />
     
     <script ansyc src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-    <script async src="js/jquery-2.1.1.min.js"></script>
-    <script async src='js/initial.js'></script>
     <script async src='js/jquery.unveil.js'></script>
+    <script async src='js/initial.js'></script>
 
 	<!--[if lt IE 9]>
   		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -53,61 +52,17 @@
       ga('send', 'pageview');
 
     </script>
-    
-    <script>
-// Include the UserVoice JavaScript SDK (only needed once on a page)
-UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/1NEz1ThXifqkPb2swiGxQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
-
-//
-// UserVoice Javascript SDK developer documentation:
-// https://www.uservoice.com/o/javascript-sdk
-//
-
-// Set colors
-UserVoice.push(['set', {
-  accent_color: '#f7e577',
-  trigger_color: 'white',
-  trigger_background_color: '#f7e577'
-}]);
-
-// Identify the user and pass traits
-// To enable, replace sample data with actual user traits and uncomment the line
-UserVoice.push(['identify', {
-  //email:      'john.doe@example.com', // User’s email address
-  //name:       'John Doe', // User’s real name
-  //created_at: 1364406966, // Unix timestamp for the date the user signed up
-  //id:         123, // Optional: Unique id of the user (if set, this should not change)
-  //type:       'Owner', // Optional: segment your users by type
-  //account: {
-  //  id:           123, // Optional: associate multiple users with a single account
-  //  name:         'Acme, Co.', // Account name
-  //  created_at:   1364406966, // Unix timestamp for the date the account was created
-  //  monthly_rate: 9.99, // Decimal; monthly rate of the account
-  //  ltv:          1495.00, // Decimal; lifetime value of the account
-  //  plan:         'Enhanced' // Plan name for the account
-  //}
-}]);
-
-// Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', { mode: 'satisfaction', trigger_position: 'bottom-right' }]);
-
-// Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'satisfaction' }]);
-
-// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
-UserVoice.push(['autoprompt', {}]);
-</script>
 </head>
     
 <body>
-    <div id="fb-root"></div>
+    <!--<div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script>-->
     
 	<div id="header-panel">
 		<div id="branding"><a id="logo" href="http://www.madrasa.ca" title="home"><img id="icon" src="img/ma-logo-w.png" alt="Ma"><img id="word-mark" src="img/ma-wordmark.png" alt="Madrasa"></a></div>
@@ -121,22 +76,24 @@ UserVoice.push(['autoprompt', {}]);
 	<ul id="topic-list"></ul>
 	<div id="banner-panel"></div>            
 	<div id="main-panel"><div id="link-display"><h1 id="title"></h1></div></div>
-    <div id="submit-panel"></div> 
+    <div class="panel submission"></div> 
     
 	<!--
 	<div class="share"><div class="fb-share-button" data-href="http://wwww.madrasa.ca" data-type="button_count"></div><a href="http://madrasa.com/" class="twitter-share-button" data-lang="en">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-		<div id="register-display">
+-->		
+    <div class="panel login">
+<!--    <div class="display login">
 		
 		<form>
-		<h1>Create Your Account</h1>
-		<p>Create your account to submit how tos.</p>
-		<input class="submit user" type="text" placeholder="Pick a username*">
-		<input class="submit email" type="email" placeholder="youraccount@example.com*">
-		<input class="submit image" type="password" placeholder="Create a password*">
-		<input class="submit description" type="password" placeholder="Confirm password*">
+        <a class='close' href='#'><img src='img/close-btn-w.png'></a>
+		<h1>Sign In</h1>
+		<p>Sign in to submit, comment and create lists</p>
+		<input class="field user" type="text" placeholder="Pick a username*">
+		<input class="field image" type="password" placeholder="Choose a password*">
 		<hr>
-		<input id="register-btn" type="button" value="Sign Me Up">
+		<input class="submit register" type="button" value="Sign Me Up">
+            </form>
 		</div>
--->
+        </div>-->
 </body>
 </html>

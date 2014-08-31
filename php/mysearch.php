@@ -44,7 +44,7 @@
 					  
 				//Give the list element a rel with the data results ID incase we want to act on this later, like selecting from the list
 					  
-					$('#link-display').append('<div id=\"link-overlay\"><a href=\"' + this.link + '\" target=\"_blank\"><img src=\"img/madrasa-ph.png\" data-src=\"' + this.image + '\"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class=\"share post\"><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"madrasaknows\" data-text=\"I just learned about \"' + this.title + '\" data-count=\"none\" data-url=\"' + this.link + '\" data-lang=\"en\">Tweet</a><a target=\"_blank\" href=\"//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '\"><img class=\"reddit\" src=\"//www.reddit.com/static/spreddit10.gif\" alt=\"submit to reddit\" border=\"0\" /></a><div class=\"fb-share-button\" data-href=\"' + this.link + '\" data-type=\"button\"></div></div><hr><a id=\"tags\" href=\"#\">' + this.tags + '</a></a></div');
+					$('#link-display').append('<div id=\"link-overlay\"><a href=\"' + this.link + '\" target=\"_blank\"><img src=\"img/madrasa-ph.png\" data-src=\"' + this.image + '\"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class=\"share post\"><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"madrasaknows\" data-text=\"I just learned about \"' + this.title + '\" data-count=\"none\" data-url=\"' + this.link + '\" data-lang=\"en\">Tweet</a><a target=\"_blank\" href=\"//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '\"><img class=\"reddit\" src=\"//www.reddit.com/static/spreddit10.gif\" alt=\"submit to reddit\" border=\"0\" /></a><div class=\"fb-share-button\" data-href=\"' + this.link + '\" data-type=\"button\"></div></div><hr><a id=\"tags\" href=\"#\">\"' + this.tags + '\"</a></a></div');
 				  });
 
 					$('img').unveil(200);
@@ -52,7 +52,7 @@
 				} else {
 
 				  //If there are no results, inform the user - add 'no-results' class so we can style it differently
-				  $('#title').append(\"What did you do?\");
+				  $('#title').append(\"Sorry I couldn't find anything\");
 
 				}
 

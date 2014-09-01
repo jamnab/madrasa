@@ -23,7 +23,9 @@
 			},
 			beforeSend: function(data) {
 				$('#link-display').show();
-				
+				$('#banner-panel').append('<div id=\"banner\"><h1>Learn about " 
+					. $_REQUEST['text'] . "\, from the best " 
+					. $_REQUEST['text'] . "\ blogs</h1><h2>Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed.</h2><input id=\"explore\" type=\"button\" onclick=\"exploreClick()\" value=\"Start Learning\"><br></div>');
 			  },
 			  
 			success: function(data) {
@@ -38,7 +40,7 @@
 					//Display the featured posts
 					$('#title').append(\"Here are How-Tos for " 
 					. $_REQUEST['text'] . "\");
-					$('#link-display').append(\"<script defer>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>\");
+					
 				//Loop through each result and add it to the list
 				  $.each(data.results, function() {
 					  

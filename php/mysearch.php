@@ -23,7 +23,7 @@
 			},
 			beforeSend: function(data) {
 				$('#link-display').show();
-				$('#banner-panel').append('<div id=\"banner\"><h1>Learn about " 
+				$('#banner-panel').append('<div id=\"banner\"><h1>Learn " 
 					. $_REQUEST['text'] . "\, from the best " 
 					. $_REQUEST['text'] . "\ blogs</h1><h2>Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed.</h2><input id=\"explore\" type=\"button\" onclick=\"exploreClick()\" value=\"Start Learning\"><br></div>');
 			  },

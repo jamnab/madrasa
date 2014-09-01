@@ -215,7 +215,7 @@ function submitPost() {
                 if (data.success) {
 
                     alert('Thanks for contributing!');
-                    $('#submit-display').remove();
+                    $('.display.submission').remove();
                     
                 } else {
                     alert(data.error);

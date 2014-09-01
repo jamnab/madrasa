@@ -68,7 +68,7 @@ echo "
 	<ul id='topic-list'></ul>
 	<div id='banner-panel'></div>            
 	<div id='main-panel'><div id='link-display'><h1 id='title'></h1></div></div>
-    <div id='submit-panel'></div>    
+    <div class='panel submission'></div>   
 </body>
 <script ansyc src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script defer src='js/link.js'></script>

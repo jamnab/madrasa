@@ -20,7 +20,7 @@ $(function () {
     
         submitAppear();
         
-        $('#submit-btn').click(function () {
+        $('.post').click(function () {
             submitPost();
         });
     });
@@ -70,9 +70,9 @@ function loadInitial() {
                 if (data.results.length > 0) {
 
                     $('#title').append("Welcome, Here are some featured posts.");
-                    $('#link-display').append('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+                    
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><span>' + this.category + '</span></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a href="https://twitter.com/share" class="twitter-share-button" data-via="madrasaknows" data-text="I just learned about ' + this.title + '"data-count="none" data-url="' + this.link + '" data-lang="en">Tweet</a><a target="_blank" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '"><img class="reddit" src="//www.reddit.com/static/spreddit10.gif" alt="submit to reddit" border="0" /></a><div class="fb-share-button" data-href="' + this.link + '" data-type="button"></div></div><hr><a id="tags" href="#">' + this.tags + '</a></a></div');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><span>' + this.category + '</span></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">' + this.tags + '</a></a></div');
                     });
                     $('img').unveil(200);
                 } else {
@@ -140,7 +140,7 @@ function loadFeatures(featureID) {
                 if (data.results.length > 0) {
             
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a href="https://twitter.com/share" class="twitter-share-button" data-via="madrasaknows" data-text="I just learned about "' + this.title + '" data-count="none" data-url="' + this.link + '" data-lang="en">Tweet</a><a target="_blank" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '"><img class="reddit" src="//www.reddit.com/static/spreddit10.gif" alt="submit to reddit" border="0" /></a><div class="fb-share-button" data-href="' + this.link + '" data-type="button"></div></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
                     });
                     $('img').unveil(200);
                 } else {
@@ -179,7 +179,7 @@ function doSearch() {
 					$('#link-display').append('<h1 id="title">Here are How-Tos for <a href="#">"' + searchText + '"</a></h1><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
 
 					$.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a href="https://twitter.com/share" class="twitter-share-button" data-via="madrasaknows" data-text="I just learned about "' + this.title + '" data-count="none" data-url="' + this.link + '" data-lang="en">Tweet</a><a target="_blank" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '"><img class="reddit" src="//www.reddit.com/static/spreddit10.gif" alt="submit to reddit" border="0" /></a><div class="fb-share-button" data-href="' + this.link + '" data-type="button"></div></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
 					});
 					$('img').unveil(200);
 
@@ -201,7 +201,6 @@ function submitAppear() {
     $('.close').click(function () {
         $('.display.submission').remove();
     });
-
 }
 function submitPost() {
 	

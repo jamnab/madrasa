@@ -39,7 +39,7 @@
         for ($i = 0; $i < count($data['category']); $i++) {
     
             // Select a random post from a subject
-           $q = "SELECT * FROM posts WHERE category LIKE '%" . $data['category'][$i] . "%' ORDER BY RAND() LIMIT 1"; 
+           $q = "SELECT * FROM posts WHERE category LIKE '%" . $data['category'][$i] . "%' ORDER BY RAND() LIMIT 3"; 
     
            $result = $db->query($q);
 

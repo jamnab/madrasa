@@ -28,7 +28,6 @@
     $data['category'] = array(
             'Art',
             'Design',
-            'Design',
             'Diy',
             'Fashion',
             'Food',

@@ -10,19 +10,31 @@
 		'error' => ''
 	);
 
-	$data['category'] = array(
-            'Advice',
+	//$data['category'] = array(
+    //        'Advice',
+    //        'Design',
+    //        'Funding',
+    //        'Growth',
+    //        'Product',
+    //        'Prototyping',
+    //        'Sales',
+    //        'Strategy',
+    //        'Team',
+    //        'Tech',
+    //        'Users',
+    //        'Venture'
+    //    );
+
+    $data['category'] = array(
+            'Art',
             'Design',
-            'Funding',
-            'Growth',
-            'Product',
-            'Prototyping',
-            'Sales',
-            'Strategy',
-            'Team',
-            'Tech',
-            'Users',
-            'Venture'
+            'Design',
+            'Diy',
+            'Fashion',
+            'Food',
+            'Lifehacks',
+            'Maker',
+            'Tech'
         );
 
     //Connect to the database

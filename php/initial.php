@@ -34,6 +34,7 @@
             'Food',
             'Lifehacks',
             'Maker',
+            'Startups',
             'Tech'
         );
 

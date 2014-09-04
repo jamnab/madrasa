@@ -51,7 +51,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>A better way to learn online</h1><h2>Madrasa makes it easier to discover and share how-to articles and videos from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Browse How-Tos"><br></div>');
+            $('#banner-panel').append('<div id="banner"><h1>The best way to learn online</h1><h2>Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Browse How-Tos"><br></div>');
         },
         success: function (data) {
         	
@@ -60,7 +60,7 @@ function loadInitial() {
         	});
         	
         	$('.topic').click(function (featureID) {
-        		
+        		mixpanel.track("Topic search");
         		featureID = $(this).attr('id');
         		loadFeatures(featureID);
         	});
@@ -72,7 +72,7 @@ function loadInitial() {
                     $('#title').append("Welcome, Here are some featured posts.");
                     
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank" onclick="mixpanel.track("External link");"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
                     });
                     $('img').unveil(200);
                 } else {
@@ -136,7 +136,7 @@ function loadFeatures(featureID) {
 
                 if (data.results.length > 0) {
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank" onclick="mixpanel.track("External link");"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
                     });
                     $('img').unveil(200);
                 } else {
@@ -152,7 +152,8 @@ function loadFeatures(featureID) {
 }
 
 function doSearch() {
-
+    
+    mixpanel.track("User search");
 	var searchText = $('#text').val();
     
 	$.ajax({
@@ -173,7 +174,7 @@ function doSearch() {
 				if (data.results.length > 0) {
 
 					$.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank" onclick="mixpanel.track("External link");"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
 					});
 					$('img').unveil(200);
 

@@ -75,23 +75,9 @@ input[type=search], input[type=text], textarea {
     background-color: #fbfbfb;
     height:40px;
 }
-form {
-	margin-left: auto;
-    margin-right: auto;
-    margin-top:45px;
-    min-width:340px;
-    max-width:480px;
-    width:50%;
-    height: auto;
-    border-bottom: 1px solid #e1e1e1;
-    border-radius: 7px;
-    position: relative;
-    padding:15px 0 10px 0;
-    background-color:#fff;
-    text-align: center;
-}
 #header-panel {
     background-color: #e71e2f;
+    background-image: linear-gradient(#e71e2f, #cf212d);
     z-index: 10;
     width: 100%;
     height: auto;
@@ -99,10 +85,6 @@ form {
     top: 0;
     position: fixed;
     text-align: center;
-}
-#branding {
-    margin-left: 3%;
-    float: left;
 }
 #logo {
     display: inline-flex;
@@ -200,12 +182,26 @@ form {
     cursor: pointer;
     opacity:0.95;
 }
+.user {
+    background-repeat:no-repeat;
+    background-position:7px center;
+    color: #fff;
+    font-size:21px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    padding:7px 8px 7px 25px;
+    margin-right:10px;
+    /*background-image:url('../img/reddit.png');*/
+}
 .search {
 	background: url(../img/search-btn.png) no-repeat;
 	background-size: contain;
 	height: 30px;
     width: 30px;
-    margin-right:7px;
+    margin:15px 0 0 3%;
+    float:left;
 }
 .add {
 	background: url(../img/submit-btn.png) no-repeat;
@@ -214,18 +210,11 @@ form {
     width: 37px;
     margin-right:5px;
 }
-.user {
-	background: url(../img/submit-btn.png) no-repeat;
-	background-size: contain;
-	height: 37px;
-    width: 37px;
-    margin-right:10px;
-}
 .menu {
 	background: url(../img/menu-btn.png) no-repeat;
 	background-size: contain;
-	height: 35px;
-    width: 35px;
+	height:35px;
+    width:35px;
     margin-top:5px;
 }
 #topic-list {
@@ -271,19 +260,19 @@ form {
 	height:400px;
 	width:100%;
 	padding-top:75px;
-	background-image:url(../img/3.jpg);
+	background-image:url(../img/9070517966_5b29f43111_k.jpg);
 	background-size:cover;
     background-position: center;
 	text-align:center;
 }
 #banner h1 {
-	color:#fff;
+	color:#e71e2f;
 	font-size:42px;
 	font-weight:600;
 	font-family:'Source Sans Pro', 'Franklin Gothic', Arial, sans-serif;
 }
 #banner h2 {
-	color:#fff;
+	color:#e71e2f;
 	font-weight:100;
 	font-size:21px;
 	width:475px;
@@ -353,13 +342,14 @@ form {
     margin-right: auto;
 }
 #link-display #link-overlay {
-    width: 250px;
-    height: 445px;
+    width: 320px;
+    height: 425px;
     padding: 0 0 20px;
     margin: 5px;
     background-color: #fff;
-    border-bottom: 1px solid #e1e1e1;
-    border-radius: 4px;
+    border:1px solid #eee;
+    border-bottom: 2px solid #e1e1e1;
+    border-radius: 5px;
     position: relative;
     
     -webkit-transition: all 0.5s ease-in-out;
@@ -369,13 +359,13 @@ form {
     transition: all 0.5s ease-in-out;
 }
 #link-display #link-overlay img {
-    width: 250px;
-    height: 225px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 4px 4px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 #link-display h3 {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
@@ -387,13 +377,14 @@ form {
     max-height: 110px;
     text-overflow:ellipsis;
 }
-.share.post {
+.actions.post {
     position:absolute;
-    bottom:42px;
+    bottom:4px;
     margin:10px 5px 5px 5px;
     text-align: center;
+    display: none;
 }
-.social {
+.actions {
     background-repeat:no-repeat;
     background-position:5px center;
     color: #fff;
@@ -412,8 +403,7 @@ form {
 }
 .reddit {
     background-color: #ff5700;
-    background-image:url('../img/reddit.png');
-    
+    background-image:url('../img/reddit.png'); 
 }
 .fb {
     background-color: #3D62B3;
@@ -423,14 +413,12 @@ form {
 }
 #link-display #link-overlay hr {
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
 }
 #link-display #link-overlay #tags {
-    color: #f22613;
-    position: absolute;
-    font-size: 14px;
-    bottom: 10px;
-    left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-left:10px;
 }
 #link-display #featured {
 	font-size:21px;
@@ -483,6 +471,21 @@ form {
     border-radius:0;
     top:0;
     left:0;
+}
+form {
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:45px;
+    min-width:340px;
+    max-width:480px;
+    width:50%;
+    height: auto;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 7px;
+    position: relative;
+    padding:15px 0 10px 0;
+    background-color:#fff;
+    text-align: center;
 }
 .close {
 	position:fixed;
@@ -556,15 +559,16 @@ form {
     #main-panel #link-display {display: block;}
     #main-panel h1 {width: 100%;margin-bottom: 20px;text-align: center;}
     #post-display {margin: 6% 0.1%;}
-    #link-display {width: 90%;}
+    #link-display {width: 87%;}
 }
 @media only screen and (max-width:898px) {
-    #link-display {width: 75%;}
+    #link-display {width: 85%;}
 }
 @media screen and (max-width:780px) {
     #banner h2 {width:300px;}
+    #link-display {width: 95%;}
 }
-@media screen and (max-width:705px) {
+@media screen and (max-width:755px) {
     #link-display {width: 80%;}
 }
 @media screen and (max-width:655px) {
@@ -578,22 +582,22 @@ form {
 @media screen and (max-width:590px) {
     #header-panel {padding-left: 0.5%;padding-right: 0.5%;}
     #footer {display: none;}
-    #link-display {width: 60%;}
+    #link-display {width: 70%;}
     #banner h1 {font-size:30px;}
 }
 @media screen and (max-width:587px) {
-    #link-display {width: 50%;}
+    #link-display {width: 65%;}
 }
 @media screen and (max-width:532px) {
-    #link-display {width: 60%;}
+    #link-display {width: 75%;}
     #header-panel {padding-bottom: 8px;}
     #branding {margin-left:2%;}
 }
 @media screen and (max-width:440px) {
     #main-panel {padding: 4% auto 0;}
     #menu {margin-top: 12px;}
-    #link-display {width:70%;} 
+    #link-display {width:87%;} 
 }
 @media screen and (max-width:340px) {
-    #link-display {width: 87%;}
+    #link-display {width: 90%;}
 }

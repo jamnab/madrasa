@@ -10,18 +10,27 @@
 		'error' => ''
 	);
     $data['category'] = array(
-            'Advice',
+            'Profile',
+            'Add How-Tos',
+            'Faves',
+            'Fashion',
+            'Food',
+            'Lifehacks',
+            'Maker',
+            'Startups',
+            'Tech'
+        );
+
+    $category = array(
+            'Art',
             'Design',
-            'Funding',
-            'Growth',
-            'Product',
-            'Prototyping',
-            'Sales',
-            'Strategy',
-            'Team',
-            'Tech',
-            'Users',
-            'Venture'
+            'Diy',
+            'Fashion',
+            'Food',
+            'Lifehacks',
+            'Maker',
+            'Startups',
+            'Tech'
         );
 
     //Connect to the database
@@ -38,7 +47,7 @@
         for ($i = 0; $i < count($data['category']); $i++) {
     
             // Select a random post from a subject
-           $q = "SELECT * FROM posts WHERE category LIKE '%" . $data['category'][$i] . "%' ORDER BY RAND() LIMIT 3";
+           $q = "SELECT * FROM posts WHERE category LIKE '" . $category[$i] . "' ORDER BY RAND() LIMIT 3";
     
            $result = $db->query($q);
 

@@ -55,10 +55,11 @@ mixpanel.init(\"ac8ab27d18e0c61a278802634fc57cbd\");</script><!-- end Mixpanel -
     
 <body>
 	<div id='header-panel'>
+        <input class='btn search' type='button' title='search'>
 		<div id='branding'><a id='logo' href='http://www.madrasa.ca' title='home'><img id='icon' src='img/ma-logo-w.png' alt='Ma'><img id='word-mark' src='img/ma-wordmark.png' alt='Madrasa'></a></div>
         <div id='menu'>
-            <input class='btn search' type='button' title='search'>
-            <input class='btn add' type='button' title='submit'>
+            <!--<input class='btn search' type='button' title='search'>
+            <input class='btn add' type='button' title='submit'>-->
             <input class='btn menu' type='button' title='menu'>
         </div>
 	</div>

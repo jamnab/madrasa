@@ -10,9 +10,9 @@
 		'error' => ''
 	);
     $data['category'] = array(
-            'Profile',
-            'Add How-Tos',
-            'Faves',
+            'Art',
+            'Design',
+            'Diy',
             'Fashion',
             'Food',
             'Lifehacks',

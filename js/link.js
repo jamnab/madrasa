@@ -54,7 +54,6 @@ function loadInitial() {
         	});
         	
         	$('.topic').click(function (featureID) {
-        		mixpanel.track("Topic search");
         		featureID = $(this).attr('id');
         		loadFeatures(featureID);
                 openSesame();
@@ -111,7 +110,7 @@ function openSesame() {
 }
 
 function loadFeatures(featureID) {
-
+    mixpanel.track("Topic search");
     $.ajax({
         url: 'php/features.php',
 		type: 'POST',

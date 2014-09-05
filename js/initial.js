@@ -51,7 +51,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>The best way to learn online</h1><h2>Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Browse How-Tos"><br></div>');
+            $('#banner-panel').append('<div id="banner"><h1>The best place to learn online</h1><h2>Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Browse How-Tos"><br></div>');
         },
         success: function (data) {
         	
@@ -60,7 +60,6 @@ function loadInitial() {
         	});
         	
         	$('.topic').click(function (featureID) {
-        		mixpanel.track("Topic search");
         		featureID = $(this).attr('id');
         		loadFeatures(featureID);
         	});
@@ -118,7 +117,7 @@ function openSesame() {
 }
 
 function loadFeatures(featureID) {
-
+    mixpanel.track("Topic search");
     $.ajax({
         url: 'php/features.php',
 		type: 'POST',

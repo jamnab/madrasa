@@ -65,7 +65,7 @@ function loadInitial() {
         	});
 
             if (data.success) {
-                mixpanel.track_links("#link-overlay a", "click external link", {"referrer": document.referrer});
+                mixpanel.track_links("#link-overlay a", "click external link", {"title": this.title});
 
                 if (data.results.length > 0) {
 
@@ -133,7 +133,7 @@ function loadFeatures(featureID) {
         success: function (data) {
             if (data.success) {
                 $('#link-display').append("<h1 id='title'>Here are some posts about <a href='http://www.madrasa.ca/link.php?text='" + featureID + "'>" + featureID + "</a></h1>");
-                mixpanel.track_links("#link-overlay a", "click external link", {"referrer": document.referrer});
+                mixpanel.track_links("#link-overlay a", "click external link", {"title": this.title});
 
                 if (data.results.length > 0) {
                     $.each(data.results, function () {
@@ -171,7 +171,7 @@ function doSearch() {
                 $('#link-display').empty();
                 $('#title').empty();
                 $('#text').val(searchText);
-                mixpanel.track_links("#link-overlay a", "click external link", {"referrer": document.referrer});
+                mixpanel.track_links("#link-overlay a", "click external link", {"title": this.title});
 
 				if (data.results.length > 0) {
 

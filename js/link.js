@@ -125,11 +125,11 @@ function loadFeatures(featureID) {
         success: function (data) {
             if (data.success) {
                 $('#link-display').append("<h1 id='title'>Here are some posts about <a href='http://www.madrasa.ca/link.php?text='" + featureID + "'>" + featureID + "</a></h1>");
-                mixpanel.track_links("#link-overlay a", "click external link", {"referrer": document.referrer});
+                mixpanel.track_links("#link-overlay a", "click external link", {"title": this.title});
 
                 if (data.results.length > 0) {
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank" onclick="mixpanel.track("External link");"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
                     });
                     $('img').unveil(200);
                 } else {
@@ -162,12 +162,12 @@ function doSearch() {
                 $('#link-display').empty();
                 $('#title').empty();
                 $('#text').val(searchText);
-                mixpanel.track_links("#link-overlay a", "click external link", {"referrer": document.referrer});
+                mixpanel.track_links("#link-overlay a", "click external link", {"title": this.title});
 
 				if (data.results.length > 0) {
 
 					$.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank" onclick="mixpanel.track("External link");"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="share post"><a class="social twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="social reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="social fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr><a id="tags" href="#">"' + this.tags + '"</a></a></div');
 					});
 					$('img').unveil(200);
 

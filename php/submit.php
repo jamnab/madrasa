@@ -10,7 +10,7 @@ $data = array(
     require_once('db.inc.php');
 	
 	//Has the text been posted?
-if (isset($_REQUEST['submit'])) {		
+if (isset($_REQUEST['submit']) && ($_REQUEST['submit'] != "")) {		
     	
     	$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['submit']);
   

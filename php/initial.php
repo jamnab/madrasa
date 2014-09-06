@@ -79,6 +79,8 @@
 		
 
     }
+
+
     
 	//Set the content type for a json object and ensure charset is UTF-8. NOt utf8 otherwise it will not work in IE (Darn IE! >.<)
 	header("Content-Type: application/json; charset=UTF-8");

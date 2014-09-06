@@ -10,28 +10,28 @@ $data = array(
     require_once('db.inc.php');
 	
 	//Has the text been posted?
-if (isset($_REQUEST['submit'])) {		
+if (isset($_REQUEST['register']) && ($_REQUEST['register'] != "") ) {		
     	
-    	$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['submit']);
+    	$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['register']);
   
         foreach($data['results'] as $key=>$i) {
             //Escape array to prevent SQL injection
             $data['results'][$key] = $db->real_escape_string($i);   
         }
     	
-    	$submit = $data['results'];
+    	$register = $data['results'];
     	
         //Create query to insert values
-		$i = "INSERT INTO posts (`title`, `link`, `image`, `description`, `category`, `tags`) VALUES ('$submit[0]', '$submit[1]', '$submit[2]', '$submit[3]', '$submit[4]', '$submit[5]')";
-        $insert = $db->query($i);
+		$r = "INSERT INTO users (`uname`, `email`, `password`) VALUES ('$register[0]', '$register[1]', '$register[2]')";
+        $signup = $db->query($r);
         
         $data['success'] = true;
         
-        if ($data['success'] == true) {
+        if ($data['success'] = true) {
             $date = date('Y-m-d H:i:s');
             $to      = 'jamesbmcnab@gmail.com';
-            $subject = 'post submitted';
-            $message = 'A post was submitted to madrasa on' . $date;
+            $subject = 'user registered';
+            $message = 'A new user signed up on' . $date;
             //$headers = 'From: daily@madrasa.ca' . "\r\n" .
               //  'Reply-To: daily@madrasa.ca' . "\r\n" .
                 //'X-Mailer: PHP/' . phpversion();

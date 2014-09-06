@@ -252,6 +252,15 @@ input[type=search], input[type=text], textarea {
 #topic-list a:hover {
     color: #fff;
 }
+.features {
+    text-align: left;
+}
+.features span:before {
+    content:url(../img/reddit.png);
+    float:left;
+    margin-left:25px;
+    margin-right:25px;
+}
 #banner-panel {
 	position: relative;
     margin-top:55px;
@@ -382,7 +391,6 @@ input[type=search], input[type=text], textarea {
     bottom:4px;
     margin:10px 5px 5px 5px;
     text-align: center;
-    display: none;
 }
 .actions {
     background-repeat:no-repeat;

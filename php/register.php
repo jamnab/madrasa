@@ -10,9 +10,7 @@ $data = array(
     require_once('db.inc.php');
 	
 	//Has the text been posted?
-if (isset($_REQUEST['register']) && ($_REQUEST['register'] != "") ) {		
-    	
-    	$data['results'] = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $_REQUEST['register']);
+if (isset($_REQUEST['register']) && ($_REQUEST['register'] != "") ) {
   
         foreach($data['results'] as $key=>$i) {
             //Escape array to prevent SQL injection
@@ -25,20 +23,15 @@ if (isset($_REQUEST['register']) && ($_REQUEST['register'] != "") ) {
 		$r = "INSERT INTO users (`uname`, `email`, `password`) VALUES ('$register[0]', '$register[1]', '$register[2]')";
         $signup = $db->query($r);
         
-        $data['success'] = true;
-        
-        if ($data['success'] = true) {
-            $date = date('Y-m-d H:i:s');
-            $to      = 'jamesbmcnab@gmail.com';
-            $subject = 'user registered';
-            $message = 'A new user signed up on' . $date;
-            //$headers = 'From: daily@madrasa.ca' . "\r\n" .
-              //  'Reply-To: daily@madrasa.ca' . "\r\n" .
-                //'X-Mailer: PHP/' . phpversion();
-            //mail($to, $subject, $message, $headers);
+        $to      = $register[1];
+        $subject = 'Welcome to Madrasa';
+        $message = 'Thanks for Signing. Click the link to login and start learning with Madrasa: http://www.madrasa.ca';
+        $headers = 'From: daily@madrasa.ca' . "\r\n" .
+        'Reply-To: daily@madrasa.ca' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-            mail($to, $subject, $message);
-        }
+        mail($to, $subject, $message, $headers)
+    
     } else {
         $data['success'] = false;
         $data['error'] = "C'mon man! That's not a valid submission!";

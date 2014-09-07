@@ -217,6 +217,21 @@ input[type=search], input[type=text], textarea {
     width:35px;
     margin-top:5px;
 }
+.signin {
+    background:#fff;
+    color:#e71e2f;
+    font-size:18px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    padding:6px 20px;
+}
+.signin:hover {
+    color: #fff;
+    background:transparent;
+}
 #topic-list {
     width: 250px;
     height: 100%;
@@ -256,10 +271,15 @@ input[type=search], input[type=text], textarea {
     text-align: left;
 }
 .features span:before {
-    content:url(../img/reddit.png);
     float:left;
     margin-left:25px;
     margin-right:25px;
+}
+.features.account span:before {
+    content:url(../img/profile-gen.png);
+}
+.features.sub-post span:before {
+    content:url(../img/submit-btn-sm.png);
 }
 #banner-panel {
 	position: relative;
@@ -380,16 +400,16 @@ input[type=search], input[type=text], textarea {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 #link-display h3, p {
-    margin: 4%;
+    margin: 2.5% 4%;
 }
 #link-display p {
-    max-height: 110px;
     text-overflow:ellipsis;
 }
 .actions.post {
     position:absolute;
     bottom:4px;
-    margin:10px 5px 5px 5px;
+    margin:10px auto 5px 10px;
+    padding:3px 0;
     text-align: center;
 }
 .actions {
@@ -401,27 +421,22 @@ input[type=search], input[type=text], textarea {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     border-radius: 2px;
-    padding:3px 7px 3px 25px;
+    padding:5px 7px 5px 25px;
     margin-right:3px;
 }
-.twitter {
-    background-color: #4099FF;
-    background-image:url('../img/twitter.png');
+.star {
+    background-color: #f6a006;
+    background-image:url('../img/fav-btn.png');
     padding-left:30px;
 }
-.reddit {
-    background-color: #ff5700;
-    background-image:url('../img/reddit.png'); 
-}
-.fb {
-    background-color: #3D62B3;
-    background-image:url('../img/facebook.png');
-    padding-left:20px;
-    margin-right:0;
+.poster {
+    background-color: #c0c0c0;
+    background-image:url('../img/profile-gen.png');
+    padding-left:30px;
 }
 #link-display #link-overlay hr {
     position: absolute;
-    bottom: 12px;
+    bottom: 14px;
 }
 #link-display #link-overlay #tags {
     color: #fff;

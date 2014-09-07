@@ -25,9 +25,6 @@ if (isset($_REQUEST['submit']) && ($_REQUEST['submit'] != "")) {
 		$i = "INSERT INTO posts (`title`, `link`, `image`, `description`, `category`, `tags`) VALUES ('$submit[0]', '$submit[1]', '$submit[2]', '$submit[3]', '$submit[4]', '$submit[5]')";
         $insert = $db->query($i);
         
-        $data['success'] = true;
-        
-        if ($data['success'] == true) {
             $date = date('Y-m-d H:i:s');
             $to      = 'jamesbmcnab@gmail.com';
             $subject = 'post submitted';
@@ -38,7 +35,7 @@ if (isset($_REQUEST['submit']) && ($_REQUEST['submit'] != "")) {
             //mail($to, $subject, $message, $headers);
 
             mail($to, $subject, $message);
-        }
+        
     } else {
         $data['success'] = false;
         $data['error'] = "C'mon man! That's not a valid submission!";

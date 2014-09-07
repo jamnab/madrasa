@@ -29,9 +29,9 @@ $(function () {
     	openSearch();
     });
     
-    //$('.btn.user').click(function () {
-    //	openLogin();
-    //});
+    $('.signin').click(function () {
+    	openLogin();
+    });
       
 	$('#text').keydown(function (e) {
         if (e.keyCode === 13) {
@@ -51,7 +51,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>The best place to learn online</h1><h2>Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Browse How-Tos"><br></div>');
+            $('#banner-panel').append('<div id="banner"><h1>The best place to learn and share</h1><h2>Madrasa makes it simple to save and share how-to articles, videos, guides, resources, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Create Account"><br></div>');
         },
         success: function (data) {
         	
@@ -72,7 +72,7 @@ function loadInitial() {
                     $('#title').append("Welcome, Here are some featured posts.");
                     
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions twitter" target="_blank" href="http://twitter.com/home?status=I just learned about ' + encodeURIComponent(this.title) + ' ' + encodeURIComponent(this.link) + ' via @madrasaknows" title="Tweet this">Tweet</a><a class="actions reddit" target="_blank" title="Share to Reddit" href="//www.reddit.com/submit?title=' + this.title + '&url=' + this.link + '">Reddit This</a><a class="actions fb" href="http://www.facebook.com/sharer.php?u=' + encodeURIComponent(this.link) + '&t=' + encodeURIComponent(this.title) + '" target="_blank" title="Share to Facebook">Share</a></div><hr></a></div>');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions poster" target="_blank" href="#" >Added by uname</a><a class="actions star" target="_blank" href="#" title="Star this">10 Stars</a></div><hr></a></div>');
                     });
                     $('img').unveil(200);
                 } else {
@@ -229,9 +229,89 @@ function submitPost() {
 }
 
 function openLogin() {
-    $('.panel.login').append("<div class='display register'><form><a class='close' href='#'><img src='img/close-btn-w.png'></a><h1>Create Your Account</h1><p>Join a growing community of people learning about startups.</p><input class='field user' type='text' placeholder='Pick a username*'><input class='field email' type='email' placeholder='youremail@example.com*'><input class='field password' type='password' placeholder='Choose a password*'><hr><input class='submit register' type='button' value='Sign Me Up'></form></div>");
+    
+    $('.panel.login').append("<div class='display login'><form><a class='close' href='#'><img src='img/close-btn-w.png'></a><h1>Sign In</h1><p>Start saving and sharing how-tos from around the web</p><input class='field email' type='email' placeholder='youremail@example.com'><input class='field password' type='password' placeholder='Enter password'><p class='msg'>No account? <a class='reg-switch' href='#'>sign up here</a></p><hr><input class='submit login' type='button' value='Sign In'></form></div>");
+    
+    $('.reg-switch').click(function () {
+        $('.display.login').remove();
+        openRegister();
+    });
+    
+    $('.submit.login').click(function () {
+        loginUser();
+    });
+    
+    $('.close').click(function () {
+        $('.display.login').remove();
+    });
+}
+function loginUser() {
+	
+	var loginUser = [$('.field.email').val(), $('.field.password').val()];
+    
+    if (loginUser[0] === '' || loginUser[1] === '') {
+        alert('Please enter your user name and password.');
+    } else {
+        $.ajax({
+            url: 'php/login.php',
+            type: 'POST',
+            data: { 'login' : loginUser },
+            beforeSend: function () {
+                
+            },
+            success: function (data) {
+
+                if (data.success) {
+
+                    alert('You are now signed in!');
+                    $('.display.loginUser').remove();
+                    
+                    
+                } else {
+                    alert(data.error);
+                }
+            }
+        });
+    }
+}
+
+function openRegister() {
+    
+    $('.panel.login').append("<div class='display register'><form><a class='close' href='#'><img src='img/close-btn-w.png'></a><h1>Create Your Account</h1><p>Join a growing community of people who love to learn.</p><input class='field user' type='text' placeholder='Pick a username*'><input class='field email' type='email' placeholder='youremail@example.com*'><input class='field password' type='password' placeholder='Choose a password*'><hr><input class='submit register' type='button' value='Sign Me Up Scotty'></form></div>");
+    
+    $('.submit.register').click(function () {
+        registerUser();
+    });
     
     $('.close').click(function () {
         $('.display.register').remove();
     });
+}
+function registerUser() {
+	
+	var signupUser = [$('.field.user').val(), $('.field.email').val(), $('.field.password').val()];
+    
+    if (submitFields[0] === '' || submitFields[1] === '' || submitFields[2] === '') {
+        alert('Please fill out all the text boxes.');
+    } else {
+        $.ajax({
+            url: 'php/register.php',
+            type: 'POST',
+            data: { 'register' : signupUser },
+            beforeSend: function () {
+                
+            },
+            success: function (data) {
+
+                if (data.success) {
+
+                    alert('Thanks for registering!');
+                    $('.display.openRegister').remove();
+                    
+                } else {
+                    alert(data.error);
+                }
+            }
+        });
+    }
 }

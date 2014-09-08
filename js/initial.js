@@ -51,7 +51,7 @@ function loadInitial() {
 		data: { 'initial' : initialVal },
         beforeSend: function (data) {
 
-            $('#banner-panel').append('<div id="banner"><h1>The best place to learn and share</h1><h2>Madrasa makes it simple to save and share how-to articles, videos, guides, resources, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Create Account"><br></div>');
+            $('#banner-panel').append('<div id="banner"><h1>The best place to learn and share</h1><h2>Madrasa makes it simple to save and share how-to articles, videos, guides, resources, and podcasts from around the web.</h2><input id="explore" type="button" onclick="exploreClick()" value="Start Learning"><br></div>');
         },
         success: function (data) {
         	
@@ -72,7 +72,7 @@ function loadInitial() {
                     $('#title').append("Welcome, Here are some featured posts.");
                     
                     $.each(data.results, function () {
-                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><div class="actions post"><a class="actions poster" target="_blank" href="#" >Added by uname</a><a class="actions star" target="_blank" href="#" title="Star this">10 Stars</a></div><hr></a></div>');
+                        $('#link-display').append('<div id="link-overlay"><a href="' + this.link + '" target="_blank"><img src="img/madrasa-ph.png" data-src="' + this.image + '"><div id="featured"><a id="tags" href="#">' + this.tags + '</a></div><h3>' + this.title + '</h3><p>' + this.description + '</p><hr></a></div>');
                     });
                     $('img').unveil(200);
                 } else {
@@ -118,7 +118,7 @@ function openSesame() {
 }
 
 function loadFeatures(featureID) {
-    mixpanel.track("Topic search");
+    mixpanel.track("Topic search", {"topic": featureID});
     $.ajax({
         url: 'php/features.php',
 		type: 'POST',
@@ -154,8 +154,8 @@ function loadFeatures(featureID) {
 
 function doSearch() {
     
-    mixpanel.track("User search");
 	var searchText = $('#text').val();
+    mixpanel.track("User search", {"query": searchText});
     
 	$.ajax({
 		url: 'php/search.php',

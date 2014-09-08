@@ -137,7 +137,12 @@ input[type=search], input[type=text], textarea {
     border-radius: 0;
 }
 #text:focus {
-    border: 1px solid red;
+    border: 2px solid #cf212d;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 #text::-webkit-input-placeholder {
     color: #aaa;
@@ -284,24 +289,24 @@ input[type=search], input[type=text], textarea {
 #banner-panel {
 	position: relative;
     margin-top:55px;
+    background:url(../img/9070584916_272ef65783_k.jpg) no-repeat center;
+	background-size:cover;
 }
 #banner {
 	height:400px;
 	width:100%;
 	padding-top:75px;
-	background-image:url(../img/9070517966_5b29f43111_k.jpg);
-	background-size:cover;
-    background-position: center;
+	background-color:rgba(0,0,0,0.6);
 	text-align:center;
 }
 #banner h1 {
-	color:#e71e2f;
+	color:#fff;
 	font-size:42px;
-	font-weight:600;
+	font-weight:400;
 	font-family:'Source Sans Pro', 'Franklin Gothic', Arial, sans-serif;
 }
 #banner h2 {
-	color:#e71e2f;
+	color:#fff;
 	font-weight:100;
 	font-size:21px;
 	width:475px;
@@ -573,6 +578,11 @@ form {
 }
 .field:focus {
     border: 1px solid red;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 @media only screen and (max-width:1180px) {
     #link-display {width: 94%;}

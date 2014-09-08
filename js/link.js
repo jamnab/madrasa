@@ -15,7 +15,7 @@ $(function () {
     	openSesame();
     });
     
-    $('.btn.add').click(function () {
+    $('.subpost').click(function () {
     
         submitAppear();
         

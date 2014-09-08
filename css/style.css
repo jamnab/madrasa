@@ -222,7 +222,7 @@ input[type=search], input[type=text], textarea {
     width:35px;
     margin-top:5px;
 }
-.signin {
+.subpost {
     background:#fff;
     color:#e71e2f;
     font-size:18px;
@@ -232,8 +232,10 @@ input[type=search], input[type=text], textarea {
     -ms-border-radius: 5px;
     border-radius: 5px;
     padding:6px 20px;
+    margin:12px 0 0 3%;
+    float: left;
 }
-.signin:hover {
+.subpost:hover {
     color: #fff;
     background:transparent;
 }
@@ -272,20 +274,6 @@ input[type=search], input[type=text], textarea {
 #topic-list a:hover {
     color: #fff;
 }
-.features {
-    text-align: left;
-}
-.features span:before {
-    float:left;
-    margin-left:25px;
-    margin-right:25px;
-}
-.features.account span:before {
-    content:url(../img/profile-gen.png);
-}
-.features.sub-post span:before {
-    content:url(../img/submit-btn-sm.png);
-}
 #banner-panel {
 	position: relative;
     margin-top:55px;
@@ -296,7 +284,7 @@ input[type=search], input[type=text], textarea {
 	height:400px;
 	width:100%;
 	padding-top:75px;
-	background-color:rgba(0,0,0,0.6);
+	background-color:rgba(0,0,0,0.25);
 	text-align:center;
 }
 #banner h1 {

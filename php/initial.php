@@ -14,9 +14,11 @@
             'Design',
             'Diy',
             'Fashion',
+            'Fitness',
             'Food',
             'Lifehacks',
             'Maker',
+            'Money',
             'Startups',
             'Tech'
         );
@@ -26,9 +28,11 @@
             'Design',
             'Diy',
             'Fashion',
+            'Fitness',
             'Food',
             'Lifehacks',
             'Maker',
+            'Money',
             'Startups',
             'Tech'
         );

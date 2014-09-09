@@ -129,6 +129,7 @@ input[type=search], input[type=text], textarea {
     font-size: 21px;
     letter-spacing: 0.5px;
     text-align: center;
+    display:none;
     
     -webkit-appearance:searchfield;
     -webkit-border-radius: 0;
@@ -303,7 +304,7 @@ input[type=search], input[type=text], textarea {
 }
 #explore {
 	border: 1px solid;
-    background-color: #fff;
+    background-color: #e71e2f;
     background-image: linear-gradient(#e3262e, #ab171e);
     border-bottom-color: #820a0f;
 	border-left-color: #9a1015;

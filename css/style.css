@@ -331,6 +331,7 @@ input[type=search], input[type=text], textarea {
 }
 #explore:hover {
     opacity: 0.95;
+    background-color:#ab171e;
     cursor: pointer;
 }
 #main-panel {
@@ -382,11 +383,11 @@ input[type=search], input[type=text], textarea {
     transition: all 0.5s ease-in-out;
 }
 #link-display #link-overlay img {
-    width: 100%;
+    width: 320px;
     height: 250px;
     object-fit: cover;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     border-radius: 5px 5px 0 0;
 }

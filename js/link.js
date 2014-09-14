@@ -80,7 +80,7 @@ function loadInitial() {
 
 function signupClick() {
 	//$('html, body').animate({scrollTop: $('#main-panel').offset().top - 60}, 'slow', 'swing');
-  window.location.assign("http://madrasa.meteor.com");
+  window.open('http://madrasa.meteor.com', '_blank');
 }
 
 function openSearch() {

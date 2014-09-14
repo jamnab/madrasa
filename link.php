@@ -3,8 +3,8 @@ echo "
 <!DOCTYPE html>
 <html lang='en-US'>
 <head>
-	<title>Madrasa | Learn About Startups, From Startups</title>
-	<meta name='description' content='Madrasa makes it easier to find articles and videos from the best in the industry to help you the gain insight and skills you need to succeed.'>
+	<title>Madrasa | Share What You've Learned.</title>
+	<meta name='description' content='Share What You've Learned. Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.'>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
 
 	<link rel='icon' href='img/favicon.png'>
@@ -14,10 +14,10 @@ echo "
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
 
 <!-- Twitter Card data -->
-<meta name='twitter:card' content='Enjoy Learning. Discover crazy, fun and interesting projects to do with your time.'>
+<meta name='twitter:card' content='Share What You've Learned. Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.'>
 <meta name='twitter:site' content='@madrasaknows'>
 <meta name='twitter:title' content='Madrasa'>
-<meta name='twitter:description' content='Enjoy Learning. Discover crazy, fun and interesting projects to do with your time.'>
+<meta name='twitter:description' content='Share What You've Learned. Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.'>
 <meta name='twitter:creator' content='@madrasaknows'>
 <meta name='twitter:image' content='http://madrasa.ca/img/ma-apple-icon.png'>
 
@@ -26,7 +26,7 @@ echo "
 <meta property='og:type' content='article' />
 <meta property='og:url' content='http://madrasa.ca/' />
 <meta property='og:image' content='http://madrasa.ca/img/ma-og-icon.png' />
-<meta property='og:description' content='Enjoy Learning. Discover crazy, fun and interesting projects to do with your time.' />
+<meta property='og:description' content='Share What You've Learned. Madrasa makes it simple to discover and share how-to articles, videos, and podcasts from around the web.' />
 <meta property='og:site_name' content='Madrasa' />
 <meta property='fb:admins' content='508293321' />
 

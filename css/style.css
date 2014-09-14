@@ -166,7 +166,7 @@ input[type=search], input[type=text], textarea {
     padding: 0;
 }
 #menu {
-    margin-top: 12px;
+    margin-top: 6px;
     margin-right: 3%;
     float:right;
 }
@@ -235,7 +235,7 @@ input[type=search], input[type=text], textarea {
     -ms-border-radius: 5px;
     border-radius: 5px;
     padding:6px 10px;
-    margin:12px 0 0 3%;
+    margin:6px 0 0 3%;
     float: left;
 }
 .subpost:hover {

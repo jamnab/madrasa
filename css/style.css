@@ -65,11 +65,11 @@ title {
 input[type=search], input[type=text], textarea {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    
+
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    
+
     color: #777;
     letter-spacing:normal;
     background-color: #fbfbfb;
@@ -77,18 +77,20 @@ input[type=search], input[type=text], textarea {
 }
 #header-panel {
     background-color: #e71e2f;
-    background-image: linear-gradient(#e71e2f, #cf212d);
+    /*background-image: linear-gradient(#e71e2f, #cf212d);*/
+    background:transparent;
     z-index: 10;
     width: 100%;
     height: auto;
+    padding-top:30px;
     padding-bottom: 8px;
     top: 0;
-    position: fixed;
+    position:absolute;
     text-align: center;
 }
 #logo {
     display: inline-flex;
-    
+
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -130,7 +132,7 @@ input[type=search], input[type=text], textarea {
     letter-spacing: 0.5px;
     text-align: center;
     display:none;
-    
+
     -webkit-appearance:searchfield;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -172,12 +174,12 @@ input[type=search], input[type=text], textarea {
     border: none;
     padding: 0;
     vertical-align:middle;
-    
+
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0;
-    
+
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -224,21 +226,21 @@ input[type=search], input[type=text], textarea {
     margin-top:5px;
 }
 .subpost {
-    background:#fff;
-    color:#e71e2f;
+    background:transparent;
+    color:#fff;
     font-size:18px;
     border: 1px solid #fff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     border-radius: 5px;
-    padding:6px 20px;
+    padding:6px 10px;
     margin:12px 0 0 3%;
     float: left;
 }
 .subpost:hover {
     color: #fff;
-    background:transparent;
+    background:#e71e2f;
 }
 #topic-list {
     width: 250px;
@@ -277,15 +279,14 @@ input[type=search], input[type=text], textarea {
 }
 #banner-panel {
 	position: relative;
-    margin-top:55px;
-    background:url(../img/9070584916_272ef65783_k.jpg) no-repeat center;
+    background:url(../img/3.jpg) no-repeat center;
 	background-size:cover;
 }
 #banner {
 	height:400px;
 	width:100%;
-	padding-top:75px;
-	background-color:rgba(0,0,0,0.25);
+	padding-top:175px;
+	/*background-color:rgba(0,0,0,0.25);*/
 	text-align:center;
 }
 #banner h1 {
@@ -322,7 +323,7 @@ input[type=search], input[type=text], textarea {
     text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
     font: 400 21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
     letter-spacing:0.2px;
-    
+
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -339,7 +340,7 @@ input[type=search], input[type=text], textarea {
     min-height: 300px;
     width: auto;
     padding: 0 0 50px 3%;
-    margin-top: 90px;
+    margin-top: 70px;
     overflow-y: auto;
     position: relative;
     z-index: 0;
@@ -375,7 +376,7 @@ input[type=search], input[type=text], textarea {
     border-bottom: 2px solid #e1e1e1;
     border-radius: 5px;
     position: relative;
-    
+
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -619,7 +620,7 @@ form {
 @media screen and (max-width:440px) {
     #main-panel {padding: 4% auto 0;}
     #menu {margin-top: 12px;}
-    #link-display {width:87%;} 
+    #link-display {width:87%;}
 }
 @media screen and (max-width:340px) {
     #link-display {width: 90%;}
